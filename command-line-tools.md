@@ -5,7 +5,8 @@ Most of the tool (except sydCreateDatabase) requires a database, set by the flag
 
 Help for most of the tools may be displayed with the `-h` flag. 
 
-## Tools common to all types of databases:
+## Tools common to all types of databases
+
 * `sydCreateDatabase  <schema> <filename.db> <folder>`
 * `sydInsert <table> [<arg>]`
 * `sydDelete <table> <list_of_ids>`
@@ -13,7 +14,8 @@ Help for most of the tools may be displayed with the `-h` flag.
 * `sydDump [<table>] [<list of ids>] [-f print option]`
 
 
-## Tools for StandardDatabases:
+## Tools for StandardDatabases
+
 * `sydInsertDicom          <patient> <injection> <folders>`
 * `sydUpdateRadionuclide   <name>`
 * `sydInsertCalibration    <image_id> <fov_ratio %>`
