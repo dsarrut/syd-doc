@@ -3,6 +3,8 @@ All tools start with 'syd'. Verbosity is managed by `-v` flag. You can increase 
 
 Most of the tool (except sydCreateDatabase) requires a database, set by the flag `--db filename.db` or implicitly with the environment variable `SYD_CURRENT_DB`. 
 
+Help for most of the tools may be displayed with the `-h` flag. 
+
 
 # sydCreateDatabase
 
