@@ -5,12 +5,39 @@ Most of the tool (except sydCreateDatabase) requires a database, set by the flag
 
 Help for most of the tools may be displayed with the `-h` flag. 
 
+## Tools common to all types of databases:
+* `sydCreateDatabase  <schema> <filename.db> <folder>`
+* `sydInsert <table> [<arg>]`
+* `sydDelete <table> <list_of_ids>`
+* `sydFind <table> [<filter_pattern>] [-d for dump>] [-f print option]`
+* `sydDump [<table>] [<list of ids>] [-f print option]`
+
+
+## Tools for StandardDatabases:
+* `sydInsertDicom          <patient> <injection> <folders>`
+* `sydUpdateRadionuclide   <name>`
+* `sydInsertCalibration    <image_id> <fov_ratio %>`
+
+## Tools for Images (StandardDatabase)
+
+All those tools have some `--tag` options to set/remove tags when creating or updating an Image.
+
+* `sydInsertImageFromDicom            <list_of_dicom_ids>`
+* `sydStitchDicom                     <list_of_dicom_ids>`
+* `sydCropImage                       <list_of_image_ids>`
+* `sydUpdateImageTag                  <add|rm> <tags> <list of image_ids>`
+* `sydInsertDecayCorrectedImage       <list of image_ids>`
+* `sydSubstituteRadionuclide          <list of image_ids>`
+* `sydInsertIntegratedActivityImage   <list_image_ids>`
+* `sydInsertRoiMaskImage              <roi> <dicom_id> <mask.mhd>`
+* `sydInsertRoiStatistic              <roi> <image_id>`
+
 
 # sydCreateDatabase
 
 Usage: `sydCreateClinicDatabase <schema> <filename.db> <folder>`. It creates a database name *filename.db* associated with a folder where the images will be stored. The filename and the folder must be in the same folder. 
 
-The database *filename.db* is a sqlite file that can be viewed or browsed with any database viewer, such as [sqlitestudio](http://sqlitestudio.pl) 
+The database *filename.db* is a sqlite file that can be viewed or browsed with any database viewer, such as [sqlitestudio](http://sqlitestudio.pl). We recommend to use such a gui tool to explore the db. 
 
 The schema is *StandardDatabase*. A schema define the list of tables the database contains. Other types of schema will be proposed in the future. Database schemas are plugin libraries that can be dynamically found in the `SYD_PLUGIN` folder. 
 
