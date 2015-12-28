@@ -20,7 +20,7 @@ Make this database the default database by setting a environment variable:
 ```bash
 export SYD_CURRENT_DB=/home/foobar/test.db
 
-# Now you do not need to specify the database on the command line:
+ # Now you do not need to specify the database on the command line:
 sydFind
 ```
 
@@ -60,20 +60,20 @@ The given `folder_dicom` is scanned for dicom files. Images are sorted to create
 Once your database has been populated with some data, you may display some information with `sydFind`. `sydFind` display information on elements (records) of given table (Patient, Injection, DicomSerie etc). The elements that will be displayed are designated by their id. The `sydFind` tool perform a simple search like the shell command `grep` and retrieve the id of the elements that match the pattern. Some examples below:
 
 ```sh
-# Print all patients
+ # Print all patients
 sydFind Patient
 
-# Print all injection
+ # Print all injection
 sydFind Injection
 
-# Print the tables in the database
+ # Print the tables in the database
 sydFind
 
-# Find the dicomserie that contains the words "SPECT" and "TOMO" somewhere
-# in their description, but does not contain the word "PLANAR".
+ # Find the dicomserie that contains the words "SPECT" and "TOMO" somewhere
+ # in their description, but does not contain the word "PLANAR".
 sydFind DicomSerie SPECT TOMO -e PLANAR
 
-# Same as previous but only display the ids as a raw line
+ # Same as previous but only display the ids as a raw line
 sydFind DicomSerie SPECT TOMO -e PLANAR -l
 ```
 
@@ -83,17 +83,28 @@ You can delete a record by specifying its id and its table: `sydDelete DicomSeri
 -------------------------------------------------------------------------------
 ## Convert DICOM to raw images (mhd/raw)
 
-The main idea is to keep the initial DICOM images and perform image processing tasks on copy
+The first key point is to keep the initial DICOM images and perform image processing tasks on copy images in mhd/raw file format. The second point is to label images with tags such as to retrieve them easily.
+
+```
+ # Convert the DicomSerie number 123 into a mhd image. Add two tags to the image
+ sydInsertImageFromDicom -v1 123 --tag "spect" --tag "scaled"
+
+ # Retrive some image
+ sydFind Image spect
+```
+
+You can use `sydUpdateImage` to modify the tags, the pixel unit, or perform basic operations.
 
 
 -------------------------------------------------------------------------------
 ## Conclusion
 
 
-* Syd manages a single file database, with raw image data in a single associated folder.
+* Syd manages a *single file* database, with raw image data in a single associated folder.
+* Database is organized with tables such as `Patient`, `Injection`, `DicomSerie` and `Image`. Every records has a unique id. This id is and will be unique: if the record is deleted, they will never be a new record of the same table with the same id in the same database.
 * Use ```sydFind``` to select some images and find their id.
 * Images may be easily browsed in the file system.
-* Date are managed by
+* Date are managed by a string composed like "2016-06-14 14:31"
 
 
 <!-- ## Select and convert DICOM to ITK ready -->
