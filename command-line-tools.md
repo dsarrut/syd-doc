@@ -59,3 +59,10 @@ sydFind Image gg spect
  1956 gg 2012-03-05 11:26                 spect_dc 130x130x171 4.664x4.664x4.664   221 Bq_by_IA ...01.2983962137656
 
 ```
+
+If several words are given, it behave like an logical 'and' (all words must be in the records to be displayed). 
+
+If a word is preceded by the flag `-e` (like *exclude*), the records will not be displayed if it contains the word. 
+
+Using `sydFind` without table name displays the list of tables of the database. 
+
