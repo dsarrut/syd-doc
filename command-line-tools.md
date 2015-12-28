@@ -1,6 +1,8 @@
 
 All tools start with 'syd'. Verbosity is managed by `-v` flag. You can increase the verbosity by increasing the number `-v1`, `-v2` etc ...
 
+Most of the tool (except sydCreateDatabase) requires a database, set by the flag `--db filename.db` or implicitly with the environment variable `SYD_CURRENT_DB`. 
+
 
 # sydCreateDatabase
 
@@ -39,7 +41,8 @@ sydFind Image
  ...
 ```
 
-Give some words after the table name to filter the results and only display records that contains those words.
+Give some words after the table name to filter the results and only display records that contains those words. The flag `--noheader` remove the two first lines that start with '#'. 
+
 
 ```
 sydFind Image gg spect
@@ -65,4 +68,7 @@ If several words are given, it behave like an logical 'and' (all words must be i
 If a word is preceded by the flag `-e` (like *exclude*), the records will not be displayed if it contains the word. 
 
 Using `sydFind` without table name displays the list of tables of the database. 
+
+Using the flag `-l` list the ids of the matched records. It is useful when `sydFind` is piped to another command. 
+
 
