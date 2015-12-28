@@ -73,4 +73,22 @@ Using `sydFind` without table name displays the list of tables of the database.
 
 Using the flag `-l` list the ids of the matched records. It is useful when `sydFind` is piped to another command. 
 
+The flag `-f` allows to specify a (basic) output format. Use `-f help` to get a list of format, depending on the table name. For example for the table *Image*, you can use `-f filelist` to display a list of matched image filenames:
+
+```
+sydFind Image gg spect ini -f filelist
+
+db/data/gg/NM_164.mhd db/data/gg/NM_165.mhd db/data/gg/NM_1950.mhd db/data/gg/NM_166.mhd db/data/gg/NM_1951.mhd db/data/gg/NM_167.mhd db/data/gg/NM_1952.mhd
+
+```
+
+It could be useful to view the images, for example with [vv](http://vv.creatis.insa-lyon.fr): 
+
+```
+vv --sequence `sydFind Image gg spect ini -f filelist`
+
+```
+
+
+
 
