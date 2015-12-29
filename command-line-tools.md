@@ -10,8 +10,7 @@ Help for most of the tools may be displayed with the `-h` flag.
 * `sydCreateDatabase  <schema> <filename.db> <folder>`
 * `sydInsert <table> [<arg>]`
 * `sydDelete <table> <list_of_ids>`
-* `sydFind <table> [<filter_pattern>] [-d for dump>] [-f print option]`
-* `sydDump [<table>] [<list of ids>] [-f print option]`
+* `sydFind <table> [<filter_pattern>] [-l for id list>] [-f print option]`
 
 
 ## Tools for StandardDatabases
@@ -129,7 +128,9 @@ sydInsert Patient zh 1 100 012XYZ123
 
 Only few simple tables allow to insert records with `sydInsert`. Other tables have specific `sydInsert` commands, such as `sydInsertImage` or `sydInsertDicom`. 
 
+# sydDelete
 
+`sydDelete <table> <list of records id>`. Really, you need an explanation for this tool ? 
 
 
 
