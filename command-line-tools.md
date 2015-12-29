@@ -115,8 +115,9 @@ It could be useful to view the images, for example with [vv](http://vv.creatis.i
 
 ```
 vv --sequence `sydFind Image gg spect ini -f filelist`
-
 ```
+
+Only very simple request (a single table) may be performed here. 
 
 
 # sydInsert
