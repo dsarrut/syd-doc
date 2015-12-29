@@ -119,5 +119,27 @@ vv --sequence `sydFind Image gg spect ini -f filelist`
 ```
 
 
+# sydInsert
+
+`sydInsert <table> <arg>` allows to add a new records in the table. The needed arguments depend on the table type. For example, the following command add a new patient, with name 'zh', study_id =1, 100 kg, and dicom id = 012XYZ123. The study_id is **not** the id of the record, but the number of the patient in a study. 
+
+```
+sydInsert Patient zh 1 100 012XYZ123
+```
+
+Only few simple tables allow to insert records with `sydInsert`. Other tables have specific `sydInsert` commands, such as `sydInsertImage` or `sydInsertDicom`. 
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
