@@ -5,7 +5,7 @@ Most of the tool (except sydCreateDatabase) requires a database, set by the flag
 
 Help for most of the tools may be displayed with the `-h` flag. 
 
-## Tools common to all types of databases
+### Tools common to all types of databases
 
 * `sydCreateDatabase  <schema> <filename.db> <folder>`
 * `sydInsert <table> [<arg>]`
@@ -14,13 +14,13 @@ Help for most of the tools may be displayed with the `-h` flag.
 * `sydCheck <table>`
 
 
-## Tools for StandardDatabases
+### Tools for StandardDatabases
 
 * `sydInsertDicom          <patient> <injection> <folders>`
 * `sydUpdateRadionuclide   <name>`
 * `sydInsertCalibration    <image_id> <fov_ratio %>`
 
-## Tools for Images (StandardDatabase)
+### Tools for Images (StandardDatabase)
 
 All those tools have some `--tag` options to set/remove tags when creating or updating an Image.
 
