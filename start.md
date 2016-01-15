@@ -2,7 +2,7 @@
 
 # Quick start
 
--------------------------------------------------------------------------------
+-----------------------------------------------------
 ## Create a database
 
 First create a database. It is a single file associated with a single folder that contains the images (dicom or mhd/raw formats). This folder must be in the same directory than the database. Let's start with the default database schema named *StandardDatabase*:
@@ -24,7 +24,7 @@ export SYD_CURRENT_DB=/home/foobar/test.db
 sydFind
 ```
 
-The list of availables tables is displayed.
+The list of available tables is displayed.
 
 
 Populate the database with some patients. The fields associated with a patient are the name, the study_id number, the weight (in kg). It will be possible later to add more patients or to update information.
@@ -46,7 +46,7 @@ sydInsert -v1 Injection smith Y-90  "2016-06-14 14:31" 80.12
 
 Note that some radionuclide are available, but other may be created. Information associated with the injection may be modified later. We are now ready to insert DICOM images in the database, associated with the already defined patient and injection. This is performed with:
 
--------------------------------------------------------------------------------
+----------------------------------------------------------
 ## Insert DICOM images
 
 ```sh
@@ -80,10 +80,10 @@ sydFind DicomSerie SPECT TOMO -e PLANAR -l
 You can delete a record by specifying its id and its table: `sydDelete DicomSerie 2`. Such command will permanently delete the element ith id=2 in the database but also the associated files in the database folder. `sydDelete` may use after a `sydFind` command, allowing to delete the records that match a pattern.
 
 
--------------------------------------------------------------------------------
+----------------------------------------------------------
 ## Convert DICOM to raw images (mhd/raw)
 
-The first key point is to keep the initial DICOM images and perform image processing tasks on copy images in mhd/raw file format. The second point is to label images with tags such as to retrieve them easily.
+The first key point is to keep the initial DICOM images and perform image processing tasks on copy images in mhd/raw file format. The second point is to label images with tags to retrieve them easily.
 
 ```
  # Convert the DicomSerie number 123 into a mhd image. Add two tags to the image
@@ -93,14 +93,14 @@ The first key point is to keep the initial DICOM images and perform image proces
  sydFind Image spect
 ```
 
-You can use `sydUpdateImage` to modify the tags, the pixel unit, or perform basic operations.
+You can use `sydUpdateImage` to change the tags, the pixel unit, or perform basic operations.
 
 
--------------------------------------------------------------------------------
+----------------------------------------------------------
 ## Conclusion
 
 
-* Syd manages a *single file* database, with raw image data in a single associated folder.
+* SYD manages a *single file* database, with raw image data in a single associated folder.
 * Database is organized with tables such as `Patient`, `Injection`, `DicomSerie` and `Image`. Every records has a unique id. This id is and will be unique: if the record is deleted, they will never be a new record of the same table with the same id in the same database.
 * Use ```sydFind``` to select some images and find their id.
 * Images may be easily browsed in the file system.
