@@ -11,6 +11,7 @@ Help for most of the tools may be displayed with the `-h` flag.
 * `sydInsert <table> [<arg>]`
 * `sydDelete <table> <list_of_ids>`
 * `sydFind <table> [<filter_pattern>] [-l for id list>] [-f print option]`
+* `sydUpdate <table> <field> <value> <id>`
 * `sydCheck <table>`
 
 
