@@ -10,7 +10,7 @@ Help for most of the tools may be displayed with the `-h` flag.
 * `sydCreateDatabase  <schema> <filename.db> <folder>`
 * `sydInsert <table> [<arg>]`
 * `sydDelete <table> <list_of_ids>`
-* `sydFind <table> [<filter_pattern>] [-l for id list>] [-f print option]`
+* `sydFind <table> [<filter_pattern>] [-l] [-f]`
 * `sydUpdate <table> <field> <value> <id>`
 * `sydCheck <table>`
 
