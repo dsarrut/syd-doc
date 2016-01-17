@@ -4,6 +4,6 @@
 * [Installation](install.md)
 * [Getting started](start.md)
 * [Command line tools](command-line-tools.md)
- * [Command line tools for all database](command-line-tools-all.md)
- * [Command line tools for StandardDatabase](command-line-tools-std.md)
+ * [For all types of databases](command-line-tools-all.md)
+ * [For StandardDatabase](command-line-tools-std.md)
 
