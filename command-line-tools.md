@@ -1,3 +1,4 @@
+# Command line tools
 
 All tools start with 'syd'. Verbosity is managed by `-v` flag. You can increase the verbosity by increasing the number `-v1`, `-v2` etc ...
 
