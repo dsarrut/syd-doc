@@ -1,6 +1,6 @@
 # For all types of databases
 
-Low level tools common to all types of databases: 
+Low level tools that are common to all types of databases: 
 
 * `sydCreateDatabase  <schema> <filename.db> <folder>`
 * `sydInsert <table> [<arg>]`
