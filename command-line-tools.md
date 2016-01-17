@@ -48,7 +48,7 @@ The schema is *StandardDatabase*. A schema define the list of tables the databas
 
 # sydFind
 
-This is probably the most use tool. Just give the name of the table to display the records in the table. For example: 
+This is probably the most useful tool. Just give the name of the table to display the records in the table. For example: 
 
 ```
 sydFind Image
@@ -136,7 +136,15 @@ Only few simple tables allow to insert records with `sydInsert`. Other tables ha
 `sydDelete <table> <list of records id>`. Really, you need an explanation for this tool ? 
 
 
+# sydUpdate
 
+Low level tool to update the value of a field, this is an interface to standard sql Update command: 
+
+`sydUpdate <table> <field> <new_value> <id>`
+
+`sydUpdate Patient name JohnFoo 5`
+
+Change the value of the field `<field>` in the table `<table>` for the element with id `<id>`. 
 
 
 
