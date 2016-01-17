@@ -1,4 +1,4 @@
-# Command line tools
+# For all types of databases
 
 Low level tools common to all types of databases: 
 
