@@ -1,5 +1,14 @@
 # Command line tools (standard database)
 
+A StandardDatabase contains basics tables: 
+* Patient
+* Injection
+* DicomSerie
+* Image
+
+
+
+
 ----------------------------------------------------------
 ## Insert DICOM images
 
