@@ -109,6 +109,8 @@ Only few simple tables allow to insert records with `sydInsert`. Other tables ha
 
 `sydDelete <table> <list of records id>`. Really, you need an explanation for this tool ? 
 
+Ok, here is a trick: if you set `all` instead of a list of ids, all the elements of the table will be deleted. 
+
 
 # sydUpdate
 
