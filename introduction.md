@@ -2,8 +2,6 @@
 ![syd](images/logo-syd.png "SYD")
 
 
-Let's start with some command lines examples.
-
 **Examples:**
 
 Find all images with 'spect' and 'john' in the description:
