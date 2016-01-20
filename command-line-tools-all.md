@@ -92,7 +92,16 @@ It could be useful to view the images, for example with [vv](http://vv.creatis.i
 vv --sequence `sydFind Image gg spect ini -f filelist`
 ```
 
-Only very simple request (a single table) may be performed here. 
+A convenient option could be use to quickly open vv (of course if available on path). Use `--vv` or `--vvs` to open `vv` or `vv` with option `--sequence`
+
+```
+sydFind Image gg spect ini -vvs
+```
+
+
+sydFind can only very simple request (a single table) may be performed here. 
+
+
 
 
 # sydInsert
