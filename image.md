@@ -2,7 +2,13 @@
 
 (notes)
 
-Image: 
+
+
+---
+
+**Table `syd:Image`** 
+
+This table contains: 
 - associated patient
 - vector of tags
 - pixel_value_unit
@@ -10,13 +16,15 @@ Image:
 - associated dicoms (DicomSerie)
 - frame_of_reference_uid: coordinate system
 
- 
-Command line tools
+
+---
+
+**Command line tools to create a new image**
  - `sydInsertImage` : insert an image file in the db
  - `sydCopyImage`: insert a copy of an image
  - `sydInsertImageFromDicom`: convert a DicomSerie to an image
  - `sydStitchDicom`: convert 2 dicom into a single stitched image
- - `sydInsertIntegratedActivityImage`: compute time integrated activity image from a set of images
+ - `sydInsertIntegratedActivityImage`: compute time integrated activity image from a set of images (lot of options)
  - `sydInsertSubstituteRadionuclideImage`: 
  - `sydInsertDecayCorrectedImage`
 
@@ -27,6 +35,7 @@ modify
  - sydCropImage
  - sydUpdateImageTag --> to remove. Change by sydUpdateTag
 
+---
 API
 - `syd::ImageBuilder`: create, copy, rename an image in a database, set pixel value, 
 - `syd::ScaleImageBuilder`
