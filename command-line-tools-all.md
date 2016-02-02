@@ -98,6 +98,7 @@ A convenient option could be use to quickly open vv (of course if available on p
 sydFind Image gg spect ini -vvs
 ```
 
+If the flag "--delete" is set, the found elements will be deleted. 
 
 sydFind can only very simple request (a single table) may be performed here. 
 
