@@ -3,16 +3,17 @@
 (notes)
 
 Image: 
-- tag, pixel_value_unit
-- associated file in mhd
-- patient
+- associated patient
+- vector of tags
+- pixel_value_unit
+- associated syd::File to store mhd and raw
 - associated dicoms (DicomSerie)
 - frame_of_reference_uid: coordinate system
 
  
-new image
- - sydInsertImage *add tag, add unit*
- - sydInsertImageFromDicom
+Command line tools
+ - `sydInsertImage` *add tag, add unit*
+ - `sydInsertImageFromDicom`
  - sydInsertIntegratedActivityImage
  - sydInsertSubstituteRadionuclideImage
  - sydInsertDecayCorrectedImage
