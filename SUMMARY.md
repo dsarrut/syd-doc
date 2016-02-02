@@ -8,4 +8,5 @@
    * [For all types of databases](command-line-tools-all.md)
    * [For StandardDatabase](command-line-tools-std.md)
 * [API](api.md)
+* [Images management](image.md)
 
