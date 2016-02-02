@@ -28,6 +28,11 @@ modify
  - sydUpdateImageTag --> to remove. Change by sydUpdateTag
 
 API
+- `syd::ImageBuilder`: create, copy, rename an image in a database, set pixel value, 
+- `syd::ScaleImageBuilder`
+- `syd::CropImageBuilder`
+- - 
+
  - API: builders, or functions ?
    - ImageBuilder
    - IntegratedActivityImageBuilder
