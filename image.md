@@ -8,4 +8,5 @@ Image:
 - patient
 - associated dicoms (DicomSerie)
 - frame_of_reference_uid: coordinate system
-- 
+
+ 
