@@ -12,12 +12,12 @@ Image:
 
  
 Command line tools
- - `sydInsertImage` *add tag, add unit*
+ - `sydInsertImage` 
  - `sydInsertImageFromDicom`
- - sydInsertIntegratedActivityImage
- - sydInsertSubstituteRadionuclideImage
- - sydInsertDecayCorrectedImage
- - sydStitchDicom
+ - `sydStitchDicom`
+ - `sydInsertIntegratedActivityImage`
+ - `sydInsertSubstituteRadionuclideImage`
+ - `sydInsertDecayCorrectedImage`
  - sydCopyImage *TODO*
 
 modify
