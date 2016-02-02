@@ -20,6 +20,8 @@ This table contains:
 ---
 
 **Command line tools to create a new image**
+
+Image creation:
  - `sydInsertImage` : insert an image file in the db
  - `sydCopyImage`: insert a copy of an image
  - `sydInsertImageFromDicom`: convert a DicomSerie to an image
@@ -28,9 +30,9 @@ This table contains:
  - `sydInsertDecayCorrectedImage`: remove decay from the radionuclide associated with the injection of the images
  - `sydInsertSubstituteRadionuclideImage`: from decay corrected images, add radionuclide decay.
 
-modify
+Image modification: 
+ - `sydUpdateDoseImage`: scale the dose according to the total nb of counts computed in the tia image, and a scaling factor.
  - sydUpdateImage: tag, unit, scale
- - sydUpdateDoseImage: need tia and N *TODO*
  - sydCalibrateImage: update or insert ?
  - sydCropImage
  - sydUpdateImageTag --> to remove. Change by sydUpdateTag
