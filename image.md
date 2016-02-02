@@ -25,8 +25,8 @@ This table contains:
  - `sydInsertImageFromDicom`: convert a DicomSerie to an image
  - `sydStitchDicom`: convert 2 dicom into a single stitched image
  - `sydInsertIntegratedActivityImage`: compute time integrated activity image from a set of images (lot of options)
- - `sydInsertSubstituteRadionuclideImage`: 
- - `sydInsertDecayCorrectedImage`
+ - `sydInsertDecayCorrectedImage`: remove decay from the radionuclide associated with the injection of the images
+ - `sydInsertSubstituteRadionuclideImage`: from decay corrected images, add radionuclide decay
 
 modify
  - sydUpdateImage: tag, unit, scale
