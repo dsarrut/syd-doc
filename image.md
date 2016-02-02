@@ -12,13 +12,13 @@ Image:
 
  
 Command line tools
- - `sydInsertImage` 
- - `sydInsertImageFromDicom`
- - `sydStitchDicom`
- - `sydInsertIntegratedActivityImage`
- - `sydInsertSubstituteRadionuclideImage`
+ - `sydInsertImage` : insert an image file in the db
+ - `sydCopyImage`: insert a copy of an image
+ - `sydInsertImageFromDicom`: convert a DicomSerie to an image
+ - `sydStitchDicom`: convert 2 dicom into a single stitched image
+ - `sydInsertIntegratedActivityImage`: compute time integrated activity image from a set of images
+ - `sydInsertSubstituteRadionuclideImage`: 
  - `sydInsertDecayCorrectedImage`
- - sydCopyImage *TODO*
 
 modify
  - sydUpdateImage: tag, unit, scale
