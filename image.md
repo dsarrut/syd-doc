@@ -31,7 +31,7 @@ Image creation:
  - `sydInsertSubstituteRadionuclideImage`: from decay corrected images, add radionuclide decay.
 
 Image modification: 
- - `sydUpdateDoseImage`: scale the dose according to the total nb of counts computed in the tia image, and a scaling factor.
+ - `sydUpdateDoseImage`: scale the dose according to the total nb of counts computed in the tia image, and the number of particles used in the Monte-Carlo simulation.
  - sydUpdateImage: tag, unit, scale
  - sydCalibrateImage: update or insert ?
  - sydCropImage
