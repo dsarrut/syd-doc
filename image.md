@@ -32,7 +32,7 @@ Image creation:
 
 Image modification: 
  - `sydUpdateDoseImage`: scale the dose according to the total nb of counts computed in the tia image, and the number of particles used in the Monte-Carlo simulation.
- - sydUpdateImage: tag, unit, scale
+ - `sydUpdateImage`: update tags, pixel unit, scale
  - sydCalibrateImage: update or insert ?
  - sydCropImage
 
