@@ -35,7 +35,6 @@ Image modification:
  - sydUpdateImage: tag, unit, scale
  - sydCalibrateImage: update or insert ?
  - sydCropImage
- - sydUpdateImageTag --> to remove. Change by sydUpdateTag
 
 ---
 API
