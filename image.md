@@ -23,13 +23,13 @@ This table contains:
 
 Image creation:
  - `sydInsertImage` : insert an image file in the db
- - `sydCopyImage`: insert a copy of an image
  - `sydInsertImageFromDicom`: convert a DicomSerie to an image
  - `sydStitchDicom`: convert 2 dicom into a single stitched image
- - `sydInsertIntegratedActivityImage`: compute time integrated activity image from a set of images (lot of options)
+ - `sydInsertCalibratedImage`: scale an image according to a syd::Calibration object, in general from 'counts' to 'kBq/IA[MBq]' (IA for Injected Activity).
  - `sydInsertDecayCorrectedImage`: remove decay from the radionuclide associated with the injection of the images
  - `sydInsertSubstituteRadionuclideImage`: from decay corrected images, add radionuclide decay.
- - `sydInsertCalibratedImage`: scale an image according to a syd::Calibration object, in general from 'counts' to 'kBq/IA[MBq]' (IA for Injected Activity).
+ - `sydInsertIntegratedActivityImage`: compute time integrated activity image from a set of images (lot of options)
+ - `sydCopyImage`: insert a copy of an image
  
 Image modification: 
  - `sydUpdateDoseImage`: scale the dose according to the total nb of counts computed in the tia image, and the number of particles used in the Monte-Carlo simulation.
