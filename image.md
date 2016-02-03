@@ -28,7 +28,7 @@ Image creation:
  - `sydInsertCalibratedImage`: scale an image according to a syd::Calibration object, in general from 'counts' to 'kBq/IA[MBq]' (IA for Injected Activity).
  - `sydInsertDecayCorrectedImage`: remove decay from the radionuclide associated with the injection of the images
  - `sydInsertSubstituteRadionuclideImage`: from decay corrected images, add radionuclide decay.
- - `sydInsertIntegratedActivityImage`: compute time integrated activity image from a set of images (lot of options)
+ - `sydInsertIntegratedActivityImage`: compute time integrated activity image from a set of images (lot of options). Frequently named 'tia'.
  - `sydCopyImage`: insert a copy of an image
  
 Image modification: 
