@@ -29,7 +29,8 @@ Image creation:
  - `sydInsertIntegratedActivityImage`: compute time integrated activity image from a set of images (lot of options)
  - `sydInsertDecayCorrectedImage`: remove decay from the radionuclide associated with the injection of the images
  - `sydInsertSubstituteRadionuclideImage`: from decay corrected images, add radionuclide decay.
-
+ - `sydInsertCalibratedImage`: scale an image according to a syd::Calibration object, in general from 'counts' to 'kBq/IA[MBq]' (IA for Injected Activity).
+ 
 Image modification: 
  - `sydUpdateDoseImage`: scale the dose according to the total nb of counts computed in the tia image, and the number of particles used in the Monte-Carlo simulation.
  - `sydUpdateImage`: update tags, pixel unit, scale
