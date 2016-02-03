@@ -42,7 +42,7 @@ There are a lot of dependencies, it is not easy to install. Dependencies are: OD
 * [boost.org](http://www.boost.org)
 * Extended C++ library
 * Version > 1.40
-* Needed modules are: `date_time`, `system` and `filesystem`
+* Needed modules are: `date_tim`, `system` and `filesystem`
 
 
 ### Install Ceres-solver  <img src="images/logo-ceres.png" width="68">
