@@ -50,6 +50,7 @@ There are a lot of dependencies, it is not easy to install. Dependencies are: OD
 * For fit and optimisation
 * Need eigen and glog
 * Version > 1.11
+* Librairies for Sparse calculation are optional for OpenSyd
 
 ### SYD: download and compile the source
 
