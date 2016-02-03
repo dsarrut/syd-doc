@@ -10,6 +10,8 @@ There are a lot of dependencies, it is not easy to install. Dependencies are: OD
 * See http://www.codesynthesis.com/products/odb
 * Work with version >= 2.4.0
 * Need 3 parts to be installed: 1) odb compiler 2) libodb and 3) libodb-sqlite
+* You may need to manually install sqlite to ensure proper install of libodb-sqlite
+* Consider running test to ensure proper installation
 * for Mac osx:
   * Download and uncompress odb compiler binaries: http://www.codesynthesis.com/download/odb/2.4/odb-2.4.0-i686-macosx.tar.bz2
   * Download, compile from source for libodb and libodb)sqlite: http://www.codesynthesis.com/download/odb/2.4/libodb-sqlite-2.4.0.tar.bz2 and http://www.codesynthesis.com/download/odb/2.4/libodb-2.4.0.tar.bz2
