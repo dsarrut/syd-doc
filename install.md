@@ -11,7 +11,7 @@ There are a lot of dependencies, it is not easy to install. Dependencies are: OD
 * Work with version >= 2.4.0
 * Need 3 parts to be installed: 1) odb compiler 2) libodb and 3) libodb-sqlite
 * You may need to manually install sqlite to ensure proper install of libodb-sqlite
-* Consider running odb tests to ensure proper installation
+* (Consider running odb tests to ensure proper installation)
 * for Mac osx:
   * Download and uncompress odb compiler binaries: http://www.codesynthesis.com/download/odb/2.4/odb-2.4.0-i686-macosx.tar.bz2
   * Download, compile from source for libodb and libodb)sqlite: http://www.codesynthesis.com/download/odb/2.4/libodb-sqlite-2.4.0.tar.bz2 and http://www.codesynthesis.com/download/odb/2.4/libodb-2.4.0.tar.bz2
@@ -45,6 +45,8 @@ There are a lot of dependencies, it is not easy to install. Dependencies are: OD
 * Extended C++ library
 * Version > 1.40
 * Needed modules are: `date_time`, `system` and `filesystem`
+* For building `date_time` module, you need to install libquadmath-devel package. If this package is not available, you may install boost with your package manager
+* Beware, boost modules installed with your package manager may not work properly for openSyd compilation (cases were reported with libboost_filesystem in particular).
 
 
 ### Install Ceres-solver  <img src="images/logo-ceres.png" width="68">
