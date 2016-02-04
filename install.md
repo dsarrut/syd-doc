@@ -46,7 +46,7 @@ There are a lot of dependencies, it is not easy to install. Dependencies are: OD
 * Version > 1.40
 * Needed modules are: `date_time`, `system` and `filesystem`
 * For building `date_time` module, you need to install libquadmath-devel package. If this package is not available, you may install boost with your package manager
-* Beware, boost modules installed with your package manager may not work properly for openSyd compilation (cases were reported with libboost_filesystem in particular).
+* Beware, boost modules installed with your package manager may not work properly for OpenSyd compilation (cases were reported with libboost_filesystem in particular).
 
 
 ### Install Ceres-solver  <img src="images/logo-ceres.png" width="68">
