@@ -30,6 +30,7 @@ Image creation:
  - `sydInsertSubstituteRadionuclideImage`: from decay corrected images, add radionuclide decay.
  - `sydInsertIntegratedActivityImage`: compute time integrated activity image from a set of images (lot of options). Frequently named 'tia'.
  - `sydCopyImage`: insert a copy of an image
+ - `sydInsertMultiplyImage`: multiply two images and insert the results in the db.
  
 Image modification: 
  - `sydUpdateDoseImage`: scale the dose according to the total nb of counts computed in the tia image, and the number of particles used in the Monte-Carlo simulation.
