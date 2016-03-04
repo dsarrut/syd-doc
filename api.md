@@ -9,6 +9,9 @@
 - Image: insert, tags, processing 
 
 
+## Initialization
+
+To be able to use syd and load a database, the following lines must be use prior to anything else. 
 
 ``` c++
   // Load plugin and retrieve pointer to the (unique) manager
@@ -18,4 +21,4 @@
   syd::StandardDatabase * db = m->Read<syd::StandardDatabase>(filename);
 ```
 
-
+The PluginManager search for all available database type that can be found in the SYD_PLUGIN
