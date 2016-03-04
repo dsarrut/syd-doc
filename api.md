@@ -3,6 +3,7 @@
 
 - Initialization (db manager)
 - Read a db
+- StandardDatabase tables
 - CRUD operations (Create/Read/Update/Delete) ; pointer/vector
 - Dicom: insert
 - Image: insert, tags, processing 
