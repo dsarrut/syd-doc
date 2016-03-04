@@ -21,4 +21,4 @@ To be able to use syd and load a database, the following lines must be use prior
   syd::StandardDatabase * db = m->Read<syd::StandardDatabase>(filename);
 ```
 
-The PluginManager search for all available database type that can be found in the SYD_PLUGIN
+The PluginManager look for available database types that can be found in the SYD_PLUGIN environment variable.
