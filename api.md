@@ -1,6 +1,12 @@
 # API
 
 
+- Initialization (db manager)
+- Read a db
+- CRUD operations (Create/Read/Update/Delete)
+
+
+
 ``` c++
   // Load plugin
   syd::PluginManager::GetInstance()->Load();
