@@ -11,7 +11,7 @@
 
 
 ``` c++
-  // Load plugin
+  // Load plugin and retrieve pointer to the (unique) manager
   syd::PluginManager::GetInstance()->Load();
   syd::DatabaseManager* m = syd::DatabaseManager::GetInstance();
 
