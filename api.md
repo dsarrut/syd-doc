@@ -3,7 +3,7 @@
 
 - Initialization (db manager)
 - Read a db
-- CRUD operations (Create/Read/Update/Delete)
+- CRUD operations (Create/Read/Update/Delete) ; pointer/vector
 
 
 
