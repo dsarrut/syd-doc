@@ -64,7 +64,7 @@ There are a lot of dependencies, it is not easy to install. Dependencies are: OD
 * `ccmake ../syd`
 Provide ITK_DIR, and other path to dependence libraries, then type 'c' and 'g' to configure and generate makefiles). If you download binary version of odb, provide path to odb executable. The path for boost libraries is a little tricky. You can find an example in the next screenshot.
 
-![screenshot syd](ccmakeSyd.png)
+![screenshot syd](images/ccmakeSyd.png)
 
 * `make -j 4`
 
