@@ -1,19 +1,16 @@
 # Command line tools (standard database)
 
-A StandardDatabase contains basics tables: 
+A StandardDatabase contains basics tables:
 * Patient
 * Injection
 * DicomSerie
 * Image
 
-
-
-
 ----------------------------------------------------------
 ## Insert DICOM images
 
 ```sh
-sydInsertDicom -v1 john In-111 folder_dicom/
+    sydInsertDicom -v1 john In-111 folder_dicom/
 ```
 
 In that example, the patient is defined by his name (it can alternatively be his study_id, both are unique field). The radionuclide name is used to retrieve the injection associated with this patient. If several injections with the same radionuclide are associated to the same patient, an error occur: the injection must in that case be specified by its id. Every records in the database have an associated, unique id. Type `sydFind Injection` to list the injections and their id.
@@ -23,21 +20,21 @@ The given `folder_dicom` is scanned for dicom files. Images are sorted to create
 Once your database has been populated with some data, you may display some information with `sydFind`. `sydFind` display information on elements (records) of given table (Patient, Injection, DicomSerie etc). The elements that will be displayed are designated by their id. The `sydFind` tool perform a simple search like the shell command `grep` and retrieve the id of the elements that match the pattern. Some examples below:
 
 ```sh
- # Print all patients
-sydFind Patient
+    # Print all patients
+    sydFind Patient
 
- # Print all injection
-sydFind Injection
+    # Print all injection
+    sydFind Injection
 
- # Print the tables in the database
-sydFind
+    # Print the tables in the database
+    sydFind
 
- # Find the dicomserie that contains the words "SPECT" and "TOMO" somewhere
- # in their description, but does not contain the word "PLANAR".
-sydFind DicomSerie SPECT TOMO -e PLANAR
+    # Find the dicomserie that contains the words "SPECT" and "TOMO" somewhere
+    # in their description, but does not contain the word "PLANAR".
+    sydFind DicomSerie SPECT TOMO -e PLANAR
 
- # Same as previous but only display the ids as a raw line
-sydFind DicomSerie SPECT TOMO -e PLANAR -l
+    # Same as previous but only display the ids as a raw line
+    sydFind DicomSerie SPECT TOMO -e PLANAR -l
 ```
 
 You can delete a record by specifying its id and its table: `sydDelete DicomSerie 2`. Such command will permanently delete the element ith id=2 in the database but also the associated files in the database folder. `sydDelete` may use after a `sydFind` command, allowing to delete the records that match a pattern.
@@ -49,11 +46,45 @@ You can delete a record by specifying its id and its table: `sydDelete DicomSeri
 The first key point is to keep the initial DICOM images and perform image processing tasks on copy images in mhd/raw file format. The second point is to label images with tags to retrieve them easily.
 
 ```
- # Convert the DicomSerie number 123 into a mhd image. Add two tags to the image
- sydInsertImageFromDicom -v1 123 --tag "spect" --tag "scaled"
+    # Convert the DicomSerie number 123 into a mhd image. Add two tags to the image
+    sydInsertImageFromDicom -v1 123 --tag "spect" --tag "scaled"
 
- # Retrive some image
- sydFind Image spect
+    # Retrive some image
+    sydFind Image spect
 ```
 
 You can use `sydUpdateImage` to change the tags, the pixel unit, or perform basic operations.
+
+
+----------------------------------------------------------
+## Tools
+
+    sydInsertDicom
+
+    sydInsertImageFromDicom
+    sydInsertImage
+    sydInsertMultiplyImage               --> in InsertImage ?
+    sydInsertCalibratedImage             --> in InsertImage ?
+    sydInsertDecayCorrectedImage         --> in InsertImage ?
+    sydInsertSubstituteRadionuclideImage --> in InsertImage ?
+    sydStitchDicom ---> to rename ? sydInsertStitchDicomImage
+    sydInsertRoiMaskImage
+    sydInsertIntegratedActivityImage
+
+    sydInsertTimePoints
+    sydInsertCalibration
+    sydInsertRoiStatistic
+
+    sydCopyImage
+    sydUpdateImage
+    sydUpdateDoseImage
+    sydCropImage
+    sydUpdateDicomSerie
+    sydDicomInfo
+    sydUpdateRadionuclide
+
+
+    syd_clitkExtractPatient
+    sydInsertGateOutput
+    syd_elastix
+    syd_transformix
