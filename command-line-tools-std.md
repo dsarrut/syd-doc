@@ -39,9 +39,9 @@ Here is the list of tools:
 
 
 ----------------------------------------------------------
-## Insert DICOM images
+## ```sydInsertDicom```: insert DICOM images
 
-```sh
+```
     sydInsertDicom -v1 john In-111 folder_dicom/
 ```
 
@@ -73,7 +73,7 @@ You can delete a record by specifying its id and its table: `sydDelete DicomSeri
 
 
 ----------------------------------------------------------
-## Convert DICOM to raw images (mhd/raw)
+## ```sydInsertImageFromDicom```: convert DICOM to image
 
 The first key point is to keep the initial DICOM images and perform image processing tasks on copy images in mhd/raw file format. The second point is to label images with tags to retrieve them easily.
 
