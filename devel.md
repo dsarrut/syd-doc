@@ -13,10 +13,10 @@ It contains two types: ```pointer``` and ```vector```. A typical declaration is:
 It contains information about the table: ```GetTableName, GetSQLTableName, GetStaticTableName, GetStaticSQLTableName```. The static version is for use without instance.
 
 Convenients functions, generally overloaded in daughter classes:
-    - ```ToString```: convert to a string. Use to print (std::cout << record;)
-    - ```Set(strings)```: set some elements (only for simple table)
-    - ```InitTable, DumpInTable```: helpers to print elements as an ascii table
-    - ```Check()```:
+- ```ToString```: convert to a string. Use to print (std::cout << record;)
+- ```Set(strings)```: set some elements (only for simple table)
+- ```InitTable, DumpInTable```: helpers to print elements as an ascii table
+- ```Check()```:
 
 Must be set in inherited classes, thanks to the macro: ```TABLE_DEFINE``` or ```TABLE_DEFINE_I``` if the table inherit from another class than Record.
 
@@ -27,10 +27,10 @@ Every record store a pointer to the database where they are stored. This pointer
 
 The function ```InitInheritance``` is used to store the tree of inherited sql table.
 
-Callbacks: important to perform action when the record is created, deleted in the database. When a record become persistent (inserted in the db), the callback set the pointer to the database that contains the record. Database may thus be accessed with record->GetDatabase();
+```Callbacks```: important to perform action when the record is created, deleted in the database. When a record become persistent (inserted in the db), the callback set the pointer to the database that contains the record. Database may thus be accessed with ```record->GetDatabase();```
 
 
-# class DatabaseDescription and TableDescription
+# Class DatabaseDescription and TableDescription
 
 Contains the list of tables/fields for a database, with correspondance between OO schema and sql schema. For example, fields that are vectors are stored with 2 tables in sql.
 
