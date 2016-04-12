@@ -89,7 +89,14 @@ You can use `sydUpdateImage` to change the tags, the pixel unit, or perform basi
 
 
 ----------------------------------------------------------
-## Tools
+# ```sydStitchDicom```
+
+
+
+
+----------------------------------------------------------
+
+## TODO Tools
 
     sydInsertDicom
 
