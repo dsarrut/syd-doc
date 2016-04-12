@@ -8,7 +8,7 @@ This table contains:
 - a pixel_value_unit
 - some ```syd::File``` to store mhd and raw
 - some associated dicoms (```syd::DicomSerie```)
-- frame_of_reference_uid: coordinate system
+- a frame_of_reference_uid: coordinate system
 
 
 ---
