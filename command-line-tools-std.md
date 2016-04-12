@@ -1,10 +1,42 @@
 # Command line tools (standard database)
 
-A StandardDatabase contains basics tables:
-* Patient
-* Injection
-* DicomSerie
-* Image
+Here is the list of tools:
+
+- Insert dicom
+ - `sydInsertDicom`
+
+- Insert Images
+ - `sydInsertImageFromDicom`
+ - `sydInsertImage`
+ - `sydInsertMultiplyImage`
+ - `sydInsertCalibratedImage`
+ - `sydInsertDecayCorrectedImage`
+ - `sydInsertSubstituteRadionuclideImage`
+ - `sydStitchDicom`
+ - `sydInsertRoiMaskImage`
+ - `sydInsertIntegratedActivityImage`
+
+- Insert for specific tables
+ - `sydInsertTimePoints`
+ - `sydInsertCalibration`
+ - `sydInsertRoiStatistic`
+
+- Processing
+ - `sydCopyImage`
+ - `sydUpdateImage`
+ - `sydUpdateDoseImage`
+ - `sydCropImage`
+ - `sydUpdateDicomSerie`
+ - `sydDicomInfo`
+ - `sydUpdateRadionuclide`
+
+
+- With external tools
+ - `syd_clitkExtractPatient`
+ - `sydInsertGateOutput`
+ - `syd_elastix`
+ - `syd_transformix`
+
 
 ----------------------------------------------------------
 ## Insert DICOM images
