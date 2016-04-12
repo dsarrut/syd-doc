@@ -1,19 +1,13 @@
 # Images management
 
-(notes)
-
-
-
----
-
-**Table `syd:Image`** 
+** Class table `syd:Image`** 
 
 This table contains: 
-- associated patient
-- vector of tags
-- pixel_value_unit
-- associated syd::File to store mhd and raw
-- associated dicoms (DicomSerie)
+- a patient
+- a vector of tags
+- a pixel_value_unit
+- some ```syd::File``` to store mhd and raw
+- some associated dicoms (DicomSerie)
 - frame_of_reference_uid: coordinate system
 
 
