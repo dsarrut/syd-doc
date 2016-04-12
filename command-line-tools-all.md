@@ -21,7 +21,7 @@ The schema is *StandardDatabase*. A schema define the list of tables the databas
 
 # sydInfo
 
-Simple tool to display informations of a database.
+Simple tool to display information of a database.
 
 Without parameter: list the folder, the version, the type of the database, the list of tables.
 
