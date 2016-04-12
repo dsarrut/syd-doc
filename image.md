@@ -7,7 +7,7 @@ This table contains:
 - a vector of tags
 - a pixel_value_unit
 - some ```syd::File``` to store mhd and raw
-- some associated dicoms (DicomSerie)
+- some associated dicoms (```syd::DicomSerie```)
 - frame_of_reference_uid: coordinate system
 
 
