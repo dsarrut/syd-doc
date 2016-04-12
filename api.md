@@ -10,7 +10,7 @@
 - Processing:
 
 
-## Open a database
+## 1. Open a database
 
 To be able to use syd and load a database, the following line **must** be use prior to anything else.
 
@@ -30,7 +30,7 @@ To open a database, just call ```Open``` from the database manager (singleton):
     syd::Database * gdb = m->Open(filename);
 ```
 
-## Basics operations
+## 2. Basics operations
 
 CRUD operations (Create/Read/Update/Delete) are:
 
@@ -55,11 +55,11 @@ Every record has a ```pointer``` type and a ```vector``` type. The first is a ``
 
 ### Read some records
 
-## Dicom insertion
+## 3. Dicom insertion
 
-## Image insertion
+## 4. Image insertion
 
-## Image processing
+## 5. Image processing
 
 
 # Common Database
