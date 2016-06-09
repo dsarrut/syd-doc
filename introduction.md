@@ -1,9 +1,11 @@
 
 ![syd](images/logo-syd.png "SYD")
 
-*What is syd ?*
+**What is syd ?**
 
-*Features*
+
+
+**Features**
 
 - list of features ?
   - no server database (advantage / drawback)
