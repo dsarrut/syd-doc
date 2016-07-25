@@ -3,8 +3,10 @@
 ![syd](images/logo-syd.png "SYD")
 
 
-SYD is a *command line* environment and a *C++ toolkit* to perform image processing tasks on a *oriented-object database* of medical images. 
+SYD is a **C++ toolkit** and a **command line** environment to perform image processing tasks on a **oriented-object database** of medical images. 
 
-SYD is initially developed to manage SPECT/PET/CT images in the field of Target Radionuclide Therapy and nuclear medicine. But it could also be useful in other domains.  
+SYD is initially developed to manage SPECT/PET/CT images in the field of Target Radionuclide Therapy and nuclear medicine. But it could also be useful in other domains. 
+
+
 
 
