@@ -96,3 +96,9 @@ Every record has a ```pointer``` type and a ```vector``` type. The first is a ``
 - TAC tables
  - TimePoints
  - FitResult
+
+## Policy for empty field
+
+When a field is not set, if it is a string, it must be set to `empty_value`. When the field is a NULL pointer, it is also printed with `empty_value`. Defined in `syd::Record` and `syd::PrintTable`.
+
+By default all string in the db are set to `empty_value` with the pragam in `syd::Record.`.
