@@ -2,6 +2,7 @@
 
 ![syd](images/logo-syd.png)
 
+(See on [github](https://github.com/OpenSyd/syd))
 
 SYD is a **C++ toolkit** and a **command line** environment to perform image processing tasks on a **oriented-object database** of medical images. 
 
