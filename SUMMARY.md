@@ -1,7 +1,6 @@
 # Summary
 
 * [Readme](README.md)
-* [Introduction](introduction.md)
 * [Installation](install.md)
 * [Quick start (examples)](start.md)
 * [Command line tools](command-line-tools.md)
