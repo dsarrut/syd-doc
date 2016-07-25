@@ -11,21 +11,40 @@ SYD allows to manage databases of images and related information (patient, acqui
 
 ---
 **Main features: **
-- **Database = 1 file + 1 folder**. There is *no database server*. The db is a simple SQL file plus a raw folder of images. Hence, images may be accessed via the conventional file system. 
+- The **database = 1 file + 1 folder**. There is *no database server*. The db is a simple SQL file plus a raw folder of images. Hence, images may be accessed via the conventional file system. 
 - The **images** are stored as DICOM or mhd/raw file formats
 - **API**: Object-oriented (OO) database management (forget SQL). You can retrieve, update or store images, patient, injection etc in the db with simple OO concepts. 
 - **Command line**: SYD also provide a number of command line tools to perform basic operations on the db, such as querying, inserting or deleting some items
 - SYD try to no reinvent the wheel, it is linked with [ITK](www.itk.org) (image processing), [Elastix](http://elastix.isi.uu.nl/) (image registration), [Gate](www.opengatecollaboration.org) (image and dose simulation).
 
 ** Limitations: **
-- the installation process is tedious because of the dependencies
+- The [installation](install.md) process is tedious because of the dependencies
 - no GUI
 - the db structure is mostly static. It means that in order to add tables or fields, you need to use code it in C++ and recompile. 
-- limited to small size db. It is not a PACS. It is intended to perform studies on limited set of data 
+- It is limited to small size db. It is not a PACS. It is intended to perform studies on limited set of data 
 - no db server, so no sharing capabilities nor collaboration 
 
 ---
-**Examples:**
+**API examples:**
+
+``` C++
+syd::StandardDatabase * db = 
+    m->Open<syd::StandardDatabase>("mydb.db"); // open the db
+syd::Image::pointer image; // Declare an image pointer
+db->QueryOne(image, 12); // Get the image with id=12 
+std::cout << image << std::endl; // Print image information
+std::cout << image->patient << std::endl; // Print associated patient info
+std::cout << image->acquisition_date << std::endl; // Do you really need help ?
+
+typedef itk::Image<float,3> ImageType;
+ImageType::Pointer itk_image;
+syd::ReadImage<ImageType>(image->GetAbsolutePath()); // Read associated itk image
+
+
+```
+
+---
+**Command line examples:**
 
 Find all images with 'spect' and 'john' in the description:
 
