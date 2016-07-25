@@ -3,7 +3,7 @@
 ![syd](images/logo-syd.png)
 
 
-SYDis a **C++ toolkit** and a **command line** environment to perform image processing tasks on a **oriented-object database** of medical images. 
+SYD is a **C++ toolkit** and a **command line** environment to perform image processing tasks on a **oriented-object database** of medical images. 
 
 SYD is initially developed to manage SPECT/PET/CT images in the field of [Target Radionuclide Therapy](https://www.google.fr/search?q=targeted+radionuclide+therapy) and [nuclear medicine](https://en.wikipedia.org/wiki/Nuclear_medicine). But it could also be useful in other domains. 
 
