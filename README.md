@@ -49,21 +49,20 @@ syd::ReadImage<ImageType>(image->GetAbsolutePath()); // Read associated itk imag
 Find all images with 'spect' and 'john' in the description:
 
 ``` bash
-$ sydFind Image spect john
+sydFind Image spect john
 
 ```
 
 Compute the mean (and other statistic) in a roi called 'liver' for all found images:
 
 ```
-$ sydFind Image spect john -l | sydInsertRoiStatistic liver
-$ 
+sydFind Image spect john -l | sydInsertRoiStatistic liver
 ```
 
 Display the computed statistics:
 
 ```
-$ sydFind RoiStatistic liver john
+sydFind RoiStatistic liver john
 ```
 
 
