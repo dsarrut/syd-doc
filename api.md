@@ -57,7 +57,53 @@ Every record has a ```pointer``` type and a ```vector``` type. The first is a ``
 
 ## 3. Dicom insertion
 
+To insert dicom files in the db, use the class `syd::DicomSerieBuilder`.
+
+```C++
+  syd::StandardDatabase * db = ...     // get a db
+  std::vector<std::string> files = ... // get some files
+  syd::Patient::pointer patient = ...  // get a patient
+
+  syd::DicomSerieBuilder builder(db);
+  builder.SetPatient(patient); // patient is a syd::Patient::pointer
+  builder.SetForcePatientFlag(true);
+  for(auto file:files) builder.SearchDicomInFile(file);
+  builder.InsertDicomSeries();
+```
+
+<!--
+    I do not manage to make bidirectional DicomFile <-> DicomSerie
+-->
+
+
+
+
 ## 4. Image insertion
+
+```syd::Image``` is maybe the most important class. It contains information about an image and is linked to a file in the db. The image file format is mhd/raw (ascii header and raw binary).
+
+There are several ways to insert `syd::Image` into the db, from a (mhd) file or from a dicom that has been inserted in the db.
+
+To insert from a file, `syd::ImageHelper::InsertMhdFiles`. Other useful functions are available in `syd::ImageHelper` as simple static functions.
+
+```C++
+    syd::Image::pointer output;
+    db->New(output); // empty image
+    output->patient = patient; // required
+    syd::ImageHelper::InsertMhdFiles(output, filename);
+```
+
+To insert from a `syd::DicomSerie`, use a `syd::ImageFromDicomBuilder`. The builder has options.
+
+```C++
+    syd::DicomSerie::pointer dicom_serie = ... // get a dicom serie
+    syd::ImageFromDicomBuilder builder;
+    builder.SetInputDicomSerie(dicom_serie, "float");
+    builder.Update();
+    syd::Image::pointer image = builder.GetOutput();
+```
+
+
 
 ## 5. Image processing
 

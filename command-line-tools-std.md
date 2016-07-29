@@ -2,8 +2,9 @@
 
 Here is the list of tools:
 
-- Insert dicom
+- Dicom
  - `sydInsertDicom`
+ - `sydDicomInfo`
 
 - Insert Images
  - `sydInsertImageFromDicom`
