@@ -1,7 +1,10 @@
 {
-  "pluginsConfig": {
-    "fontSettings": {
-      "theme": "night"
+    "plugins": [
+        "include-codeblock"
+    ],
+    "pluginsConfig": {
+        "fontSettings": {
+            "theme": "night"
+        }
     }
-  }
 }
