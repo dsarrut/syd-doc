@@ -13,7 +13,7 @@ Here is the list of tools:
  - `sydStitchDicom`
  - `sydInsertPlanarGeometricalMean`
  
- - Others
+- Others
   - `sydUpdateRadionuclide`
 
 <!--
