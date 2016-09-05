@@ -8,7 +8,7 @@ Low level tools that are common to all types of databases:
 * `sydDelete <table> <list_of_ids>`
 * `sydFind <table> [<filter_pattern>] [-l] [-f] [-t]`
 * `sydUpdate <table> <field> <value> <id>`
-* `sydCheck <table>`
+<!-- * `sydCheck <table>`-->
 
 
 # sydCreateDatabase
@@ -143,6 +143,7 @@ Low level tool to update the value of a field, this is an interface to standard 
 Change the value of the field `<field>` in the table `<table>` for the element with id `<id>`.
 
 
-# sydCheck
+<!-- # sydCheck
 
-todo.
+todo.-->
+
