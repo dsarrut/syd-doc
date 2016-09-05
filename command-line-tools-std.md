@@ -6,10 +6,18 @@ Here is the list of tools:
  - `sydInsertDicom`
  - `sydDicomInfo`
 
-- Insert Images
- - `sydInsertImageFromDicom`
+- Images
  - `sydInsertImage`
- - `sydInsertMultiplyImage`
+ - `sydInsertImageFromDicom`
+ - `sydUpdateImage`
+ - `sydStitchDicom`
+ - `sydInsertPlanarGeometricalMean`
+ 
+ - Others
+  - `sydUpdateRadionuclide`
+
+<!--
+ -  - `sydInsertMultiplyImage`
  - `sydInsertCalibratedImage`
  - `sydInsertDecayCorrectedImage`
  - `sydInsertSubstituteRadionuclideImage`
@@ -28,7 +36,6 @@ Here is the list of tools:
  - `sydUpdateDoseImage`
  - `sydCropImage`
  - `sydUpdateDicomSerie`
- - `sydDicomInfo`
  - `sydUpdateRadionuclide`
 
 
@@ -37,27 +44,22 @@ Here is the list of tools:
  - `sydInsertGateOutput`
  - `syd_elastix`
  - `syd_transformix`
-
+-->
 
 ----------------------------------------------------------
 ## ```sydInsertDicom```: insert DICOM images
 
 ```
-    sydInsertDicom -v1 john In-111 folder_dicom/
+    sydInsertDicom -v1 john folder_dicom/
 ```
 
-In that example, the patient is defined by his name (it can alternatively be his study_id, both are unique field). The radionuclide name is used to retrieve the injection associated with this patient. If several injections with the same radionuclide are associated to the same patient, an error occur: the injection must in that case be specified by its id. Every records in the database have an associated, unique id. Type `sydFind Injection` to list the injections and their id.
+In that example, the patient is defined by his name (it can alternatively be his study_id, both are unique field). The given `folder_dicom` is scanned for dicom files. Images are sorted to create DicomSerie  associated with the patient. All the files are *copied* to the database folder, so it could takes some times if a lot of images are found. Images are roughly sorted in this folder according to the following hierarchy: `patient_name/date/modality`. Initial filenames are conserved. The main idea here is to keep things simple: you can still navigate to the folder hierarchy with any DICOM viewer. Syd will the provide tools for analysis and conversion of the DICOM images.
 
-The given `folder_dicom` is scanned for dicom files. Images are sorted to create DicomSerie  associated with the patient and the injection. All the files are *copied* to the database folder, so it could takes some times if a lot of images are found. Images are roughly sorted in this folder according to the following hierarchy: `patient_name/date/modality`. Initial filenames are conserved. The main idea here is to keep things simple: you can still navigate to the folder hierarchy with any DICOM viewer. Syd will the provide tools for analysis and conversion of the DICOM images.
-
-Once your database has been populated with some data, you may display some information with `sydFind`. `sydFind` display information on elements (records) of given table (Patient, Injection, DicomSerie etc). The elements that will be displayed are designated by their id. The `sydFind` tool perform a simple search like the shell command `grep` and retrieve the id of the elements that match the pattern. Some examples below:
+Once your database has been populated with some data, you may display some information with `sydFind`. `sydFind` display information on elements (records) of given table (Patient, DicomSerie etc). The elements that will be displayed are designated by their id. The `sydFind` tool perform a simple search like the shell command `grep` and retrieve the id of the elements that match the pattern. Some examples below:
 
 ```sh
     # Print all patients
     sydFind Patient
-
-    # Print all injection
-    sydFind Injection
 
     # Print the tables in the database
     sydFind
@@ -95,7 +97,7 @@ You can use `sydUpdateImage` to change the tags, the pixel unit, or perform basi
 
 
 
-----------------------------------------------------------
+<!--
 
 ## TODO Tools
 
@@ -128,3 +130,4 @@ You can use `sydUpdateImage` to change the tags, the pixel unit, or perform basi
     sydInsertGateOutput
     syd_elastix
     syd_transformix
+-->
