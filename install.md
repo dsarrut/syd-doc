@@ -31,6 +31,7 @@ There are a lot of dependencies, it is not easy to install. Dependencies are: OD
 * Work with version >= 4.5.2
 * (Make sure you use `BUILD_SHARED_LIBS=ON`)
 * because c++11 is needed for syd, you need to compile ITK also with c++11. Use:`ccmake -DCMAKE_CXX_FLAGS=-std=c++11 ../InsightToolkit-4.8.0`. Note that this option *must* be set before any `ccmake`.
+* You must use the option `Module_ITKVtkGlue=ON` (so with vtk)
 * You may want to set the env variable: `export ITK_DIR=/my_path/build-itk`
 
 ### Install DCMTK <img src="images/logo-dcmtk.png" width="48">
