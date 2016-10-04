@@ -9,5 +9,5 @@
 * [Images management](image.md)
 * [API](api.md)
 * [Workflow](workflow.md)
-   * FAF
+   * [FAF](faf.md)
 
