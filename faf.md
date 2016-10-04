@@ -9,18 +9,18 @@
 
 - sydInsertPlanarGeometricalMean
 
-Usage: `sydInsertPlanarGeometricalMean <images>`
+Usage: `sydInsertPlanarGeometricalMean <image>`
 
-Create a new (mhd) image with the geometrical mean of planar images. `<images>`  must be a single image with 4 slices (ANT_EM, POST_EM, ANT_SC, POST_SC) for respectively the image from the anterior detector, the image from the posterior detector for the primary and the scattering. The calculation is:
+Create a new (mhd) image with the geometrical mean of planar images. `<image>`  must be a single image with 4 slices (ANT_EM, POST_EM, ANT_SC, POST_SC) for respectively the image from the anterior detector, the image from the posterior detector for the primary and the scattering. The calculation is:
 ```
 sqrt[(ANT_EM - k*ANT_SC) * flip(POST_EM - k*POST_SC)]
 ```
 
 - sydInsertAttenuationMap
 
-Usage: `sydInsertAttenuationMap <images>`
+Usage: `sydInsertAttenuationMap <image>`
 
-Create a new (mhd) image with the conversion of CT's HU into attenuation coefficients.`<images>`  must be a CT image. The calculation is:
+Create a new (mhd) image with the conversion of CT's HU into attenuation coefficients.`<image>`  must be a CT image. The calculation is:
 
 - sydInsertProjection
 
