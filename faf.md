@@ -13,15 +13,16 @@
 Usage: `sydInsertPlanarGeometricalMean <image> -k 0.5`
 
 Create a new (mhd) image with the geometrical mean of planar images. `<image>`  must be a single image with 4 slices (ANT_EM, POST_EM, ANT_SC, POST_SC) for respectively the image from the anterior detector, the image from the posterior detector for the primary and the scattering. The calculation is:
-```
-sqrt[(ANT_EM - k*ANT_SC) * flip(POST_EM - k*POST_SC)]
-```
+$$
+\sqrt{(ANT_{EM} - k*ANT_{SC}) * flip(POST_{EM} - k*POST_{SC})}
+$$
 
 - **sydInsertAttenuationImage**
 
 Usage: `sydInsertAttenuationImage <image>`
 
-Create a new (mhd) image with the conversion of CT's HU into attenuation coefficients.`<image>`  must be a CT image. The calculation is: TODO
+Create a new (mhd) image with the conversion of CT's HU into attenuation coefficients.`<image>`  must be a CT image. The calculation is: **TODO**
+
 
 - **sydInsertProjectionImage**
 
@@ -35,15 +36,16 @@ Output: 2D translations only
 Solution1: could it be possible to automatically find translations from the input images information ? 
 Solution2: allows users to change by something like sydTranslateImage <image> x y z ?
 
+
 - **sydInsertScatterCorrectedProjectionImage**
 
 Usage `sydInsertScatterCorrectedProjectionImage <images1> <images2>`
 
 Create a new (mhd) image from the CT using the attenuation map. `<images1>` is a CT image and `<images2>` is an attenuation map. The result is computed as:
 
-`CT corrected = CT * exp(...attenuationMap...)`
+$$CT_{corrected} = CT * \exp{...attenuationMap...}$$
 
-- sydCalibrateImage
+- **sydCalibrateImage**
 
 Usage `sydCalibrateImage <image_ids>`.
 
