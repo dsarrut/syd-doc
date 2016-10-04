@@ -55,7 +55,11 @@ with 1 MBq injected activity is created and linked to the images.
 
 ## 2. API
 
+In file `sydImageHelper.h/cxx`
 
+- ```double ComputeActivityInMBqByDetectedCounts(syd::Image::pointer image)```
+
+- ```void syd::ScaleImage(syd::Image::pointer image, double s)```
 
 
 
