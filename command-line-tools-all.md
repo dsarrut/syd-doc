@@ -13,7 +13,7 @@ Low level tools that are common to all types of databases:
 
 # sydCreateDatabase
 
-Usage: `sydCreateClinicDatabase <schema> <filename.db> <folder>`. It creates a database name *filename.db* associated with a folder where the images will be stored. The filename and the folder must be in the same folder.
+Usage: `sydCreateDatabase <schema> <filename.db> <folder>`. It creates a database name *filename.db* associated with a folder where the images will be stored. The filename and the folder must be in the same folder.
 
 The database *filename.db* is a sqlite file that can be viewed or browsed with any database viewer, such as [sqlitestudio](http://sqlitestudio.pl). We recommend to use such a gui tool to explore the db.
 
