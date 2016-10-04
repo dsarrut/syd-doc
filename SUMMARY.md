@@ -8,5 +8,5 @@
    * [For StandardDatabase](command-line-tools-std.md)
 * [Images management](image.md)
 * [API](api.md)
-* Workflow
+* [Workflow](workflow.md)
 
