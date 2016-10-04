@@ -1,11 +1,6 @@
 # FAF
 
-## 1. API
-
-
-
-
-## 2. Command Line tools
+## 1. Command Line tools
 
 
 - **sydInsertPlanarGeometricalMean**
@@ -56,6 +51,14 @@ unit is changed to Bq.
 It can be adapted to use need by using --scale and --pixel_unit option.
 The default pixel unit is in Bq. If the option --by_IA is used, new injection
 with 1 MBq injected activity is created and linked to the images.
+
+
+## 2. API
+
+
+
+
+
 
 
 
