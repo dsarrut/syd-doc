@@ -62,7 +62,3 @@ In file `sydImageHelper.h/cxx`
 - ```void syd::ScaleImage(syd::Image::pointer image, double s)```
 
 
-
-
-
-
