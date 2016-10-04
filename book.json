@@ -1,6 +1,7 @@
 {
     "plugins": [
-        "include-codeblock"
+        "include-codeblock", 
+        "mathjax"
     ],
     "pluginsConfig": {
         "fontSettings": {
