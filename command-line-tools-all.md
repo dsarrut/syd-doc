@@ -76,7 +76,7 @@ Give some words after the table name to filter the results and only display reco
 
 ```
 
-If several words are given, it behave like an logical 'and' (all words must be in the records to be displayed).
+If several words are given, it behaves like an logical 'and' (all words must be in the records to be displayed).
 
 If a word is preceded by the flag `-e` (like *exclude*), the records will not be displayed if it contains the word.
 
@@ -102,7 +102,7 @@ It could be useful to view the images, for example with [vv](http://vv.creatis.i
 A convenient option could be use to quickly open vv (of course if available on path). Use `--vv` or `--vvs` to open `vv` or `vv` with option `--sequence`
 
 ```
-    sydFind Image gg spect ini -vvs
+    sydFind Image gg spect ini --vvs
 ```
 
 If the flag `--delete` (or `-d`) is set, the found elements will be deleted.
