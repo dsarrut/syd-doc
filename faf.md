@@ -23,7 +23,7 @@ Create a new (mhd) image with the conversion of CT's HU into attenuation coeffic
 
 `sydInsertProjectionImage <image> --dimension 2`
 
-Create a new 2D (mhd) image with the projected image along the dimension `d`. The resulted voxel is the sum of all voxel values along the dimension `d`. The tag ```--mean (or -m)``` can be set to compute the mean (eg.: for CT) instead of the sum (eg.: for SPECT)
+Take a 3D image to create a new 2D (mhd) image with the projected image along the dimension ```--dimension (or -d)```. The resulted voxel is the sum of all voxel values along the dimension `-d`. The tag ```--mean (or -m)``` can be set to compute the mean (eg.: for CT) instead of the sum (eg.: for SPECT). The algorithm uses ```itk::SumProjectionImageFilter``` to project the image but the axes are flipped in the resulting image. Set the flag ```--flip (or -f)``` to have the the head at the top and the feet at the bottom.
 
 - Registration ?
 Input: 2D geometrical mean image + 2D projection image (from attenuation)
@@ -55,10 +55,22 @@ with 1 MBq injected activity is created and linked to the images.
 
 ## 2. API
 
-In file `sydImageHelper.h/cxx`
+In file `std_db/sydImageHelper.h\cxx`
 
 - ```double ComputeActivityInMBqByDetectedCounts(syd::Image::pointer image)```
 
 - ```void syd::ScaleImage(syd::Image::pointer image, double s)```
+
+- ```syd::Image::pointer InsertProjectionImage(const syd::Image::pointer input, double dimension=0, bool mean=false, bool flip=false);```
+
+In file `std_db/sydInsertProjectionImage.cxx\ggo`
+
+In file `core/sydProjectionImage.h\txx`
+
+- ```template<class ImageType, class OutputImageType> typename OutputImageType::Pointer Projection(const ImageType * input, double dimension, bool mean, bool flip)``` : 
+Call the next function to projectthe input image, and then compute the mean and flip if necessary
+
+- ```template<class ImageType, class OutputImageType> typename OutputImageType::Pointer Projection(const ImageType * input, double dimension);``` : 
+Call ```itk::SumProjectionImageFilter``` to project the input image along the dimension `dimension`
 
 
