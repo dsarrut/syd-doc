@@ -5,7 +5,7 @@
 
 - **sydInsertPlanarGeometricalMean**
 
-Usage: `sydInsertPlanarGeometricalMean <image> -k 0.5`
+`sydInsertPlanarGeometricalMean <image> -k 0.5`
 
 Create a new (mhd) image with the geometrical mean of planar images. `<image>`  must be a single image with 4 slices (ANT_EM, POST_EM, ANT_SC, POST_SC) for respectively the image from the anterior detector, the image from the posterior detector for the primary and the scattering. The calculation is:
 $$
@@ -14,14 +14,14 @@ $$
 
 - **sydInsertAttenuationImage**
 
-Usage: `sydInsertAttenuationImage <image>`
+`sydInsertAttenuationImage <image>`
 
 Create a new (mhd) image with the conversion of CT's HU into attenuation coefficients.`<image>`  must be a CT image. The calculation is: **TODO**
 
 
 - **sydInsertProjectionImage**
 
-Usage: `sydInsertProjectionImage <image> --dimension 2`
+`sydInsertProjectionImage <image> --dimension 2`
 
 Create a new 2D (mhd) image with the projected image along the dimension `d`. The resulted voxel is the sum of all voxel values along the dimension `d`. The tag ```--mean (or -m)``` can be set to compute the mean (eg.: for CT) instead of the sum (eg.: for SPECT)
 
@@ -34,7 +34,7 @@ Solution2: allows users to change by something like sydTranslateImage <image> x 
 
 - **sydInsertScatterCorrectedProjectionImage**
 
-Usage `sydInsertScatterCorrectedProjectionImage <images1> <images2>`
+`sydInsertScatterCorrectedProjectionImage <images1> <images2>`
 
 Create a new (mhd) image from the CT using the attenuation map. `<images1>` is a CT image and `<images2>` is an attenuation map. The result is computed as:
 
@@ -42,7 +42,7 @@ $$CT_{corrected} = CT * \exp{...attenuationMap...}$$
 
 - **sydCalibrateImage**
 
-Usage `sydCalibrateImage <image_ids>`.
+`sydCalibrateImage <image_ids>`.
 
 Perform image calibration: consider the first image of the list (according to
 acquisition time), compute activity by detected counts (assuming whole activity
