@@ -63,12 +63,10 @@ In file `std_db/sydImageHelper.h\cxx`
 
 - ```syd::Image::pointer InsertProjectionImage(const syd::Image::pointer input, double dimension=0, bool mean=false, bool flip=false);```
 
-In file `std_db/sydInsertProjectionImage.cxx\ggo`
 
 In file `core/sydProjectionImage.h\txx`
 
-- ```template<class ImageType, class OutputImageType> typename OutputImageType::Pointer Projection(const ImageType * input, double dimension, bool mean, bool flip)``` : 
-Call the next function to projectthe input image, and then compute the mean and flip if necessary
+- ```template<class ImageType, class OutputImageType> typename OutputImageType::Pointer Projection(const ImageType * input, double dimension, bool mean, bool flip)``` : Call the next function to project the input image, and then compute the mean and flip if necessary
 
 - ```template<class ImageType, class OutputImageType> typename OutputImageType::Pointer Projection(const ImageType * input, double dimension);``` : 
 Call ```itk::SumProjectionImageFilter``` to project the input image along the dimension `dimension`
