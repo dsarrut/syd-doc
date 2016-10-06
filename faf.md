@@ -25,9 +25,9 @@ $$ μ_{material}^{[kEV]} = μ_{water}^{[kEV]} + {{μ_{water}^{[kV_{eff}]}}\over{
 
  > with:
  > - CT the value of the CT in HU
- > - μ the value of the attenuation in $$ mm^{-1} $$ for water, air and bone at different energy levels. **A table is necessary**
- > - kEV ???
- > - $$ kV_{eff} $$ ???
+ > - μ the value of the attenuation in $$ mm^{-1} $$ for water, air and bone at different energy levels. **A table is necessary** (maybe here : https://www.nist.gov/pml/x-ray-mass-attenuation-coefficients )
+ > - kEV the required energy (of the target radionuclide) ???
+ > - $$ kV_{eff} $$ the X-ray effective energy ???
 
 
 - **sydInsertProjectionImage**
