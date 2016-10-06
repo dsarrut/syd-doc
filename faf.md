@@ -36,11 +36,27 @@ $$ μ_{material}^{[kEV]} = μ_{water}^{[kEV]} + {{μ_{water}^{[kV_{eff}]}}\over{
 
 Take a 3D image to create a new 2D (mhd) image with the projected image along the dimension ```--dimension (or -d)```. The resulted voxel is the sum of all voxel values along the dimension `-d`. The tag ```--mean (or -m)``` can be set to compute the mean (eg.: for CT) instead of the sum (eg.: for SPECT). The algorithm uses ```itk::SumProjectionImageFilter``` to project the image but the axes are flipped in the resulting image. Set the flag ```--flip (or -f)``` to have the the head at the top and the feet at the bottom.
 
+> When d=0, the image is projected along the x-axis
+
+> When d=1, the image is projected along the y-axis, the flip is the following:
+
+![flip1](flipY1.png)
+
+The original view is like this.
+
+![flip2](flipY2.png)
+
+After the projection the y-axis is replaced by the old z-axis. As a consequence, the phantom appears to be upside down. And to be correctly registered with the planar images, the image has to be flipped.
+
+![flip3](flipY3.png)
+
+> When d=2, the image is projected along the z-axis but in a such case, no extra-flip is needed.
+
 - Registration ?
 Input: 2D geometrical mean image + 2D projection image (from attenuation)
 Output: 2D translations only
 Solution1: could it be possible to automatically find translations from the input images information ? 
-Solution2: allows users to change by something like sydTranslateImage <image> x y z ?
+Solution2: allows users to change by something like sydTranslateImage `<image>` x y z ?
 
 
 - **sydInsertScatterCorrectedProjectionImage**
