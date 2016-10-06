@@ -79,14 +79,14 @@ $$CT_{corrected} = CT * \exp{...attenuationMap...}$$
 
 - **sydCalibrateImage**
 
-`sydCalibrateImage <image_ids>`.
+`sydCalibrateImage <image_ids> [--scale 1.0] [--by_IA]`
 
 Perform image calibration: consider the first image of the list (according to
 acquisition time), compute activity by detected counts (assuming whole activity
 in the image fov). Convert all images with the calibration factor. The pixel
 unit is changed to Bq.
-It can be adapted to use need by using --scale and --pixel_unit option.
-The default pixel unit is in Bq. If the option --by_IA is used, new injection
+It can be adapted to use need by using --scale (or `-s`) and --pixel_unit option.
+The default pixel unit is in Bq. If the option --by_IA (or `-n`) is used, new injection
 with 1 MBq injected activity is created and linked to the images.
 
 
