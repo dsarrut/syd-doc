@@ -63,7 +63,7 @@ There are a lot of dependencies, it is not easy to install. Dependencies are: OD
 * `git clone https://github.com/OpenSyd/syd.git`
 * `mkdir build ; cd build`
 * `ccmake ../syd`
-Provide ITK_DIR, and other path to dependence libraries, then type 'c' and 'g' to configure and generate makefiles). If you download binary version of odb, provide path to odb executable. The path for boost libraries is a little tricky. You can find an example in the next screenshot.
+Provide ITK_DIR, and other path to dependence libraries, then type 'c' and 'g' to configure and generate makefiles). If you download binary version of odb, provide path to odb executable. The path for boost libraries is a little tricky. You can find an example in the next screenshot. Maybe you have to add `-fpermissive` in the `CMAKE_CXX_FLAGS`
 
 ![screenshot syd](images/ccmakeSyd.png)
 
