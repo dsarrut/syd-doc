@@ -18,7 +18,7 @@ $$
 
 Create a new (mhd) image with the conversion of CT's HU into attenuation coefficients.`<image>`  must be a CT image. According to GE, the calculation from CT HU can be separated in 2 parts:
  > if the CT value ≤ 0: 
-$$ μ_{material}^{[kEV]} = μ_{water}^{[kEV]} + {{μ_{water}^{[kEV]} - μ_{air}^{[kEV]}}\over{1000}}*CT$$
+$$ μ_{material}^{[kEV]} = μ_{water}^{[kEV]} + { {μ_{water}^{[kEV]} - μ_{air}^{[kEV]} }\over{1000} }*CT$$
 
  > if the CT value > 0:
 $$ μ_{material}^{[kEV]} = μ_{water}^{[kEV]} + {{μ_{water}^{[kV_{eff}]}}\over{μ_{bone}^{[kV_{eff}]} - μ_{water}^{[kV_{eff}]}}}.{{μ_{bone}^{[kEV]} - μ_{water}^{[kEV]}}\over{1000}}*CT$$
