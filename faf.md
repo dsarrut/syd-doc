@@ -16,7 +16,15 @@ $$
 
 `sydInsertAttenuationImage <image>`
 
-Create a new (mhd) image with the conversion of CT's HU into attenuation coefficients.`<image>`  must be a CT image. The calculation is: **TODO**
+Create a new (mhd) image with the conversion of CT's HU into attenuation coefficients.`<image>`  must be a CT image. According to GE, the calculation from CT HU can be separated in 2 parts:
+ > if the CT value ≤ 0: 
+$$ μ_{material}^{[kEV]} = μ_{water}^{[kEV]} + {{μ_{water}^{[kEV]} - μ_{air}^{[kEV]}}\over{1000}}*CT$$
+
+ > if the CT value > 0:
+$$ μ_{material}^{[kEV]} = μ_{water}^{[kEV]} + {{μ_{water}^{[kV_{eff}]}}\over{μ_{bone}^{[kV_{eff}]} - μ_{water}^{[kV_{eff}]}}}.{{μ_{bone}^{[kEV]} - μ_{water}^{[kEV]}}\over{1000}}*CT$$
+
+ > with: CT: the value of the CT in HU
+ >       μ the value of the attenuation in mm-1
 
 
 - **sydInsertProjectionImage**
@@ -66,13 +74,13 @@ In file `std_db/sydImageHelper.h\cxx`
 - ```syd::Image::pointer InsertProjectionImage(const syd::Image::pointer input, double dimension=0, bool mean=false, bool flip=false);```
 
 
-In file `core/sydImageGeometricalMean.txx.h\txx`
+In file `core/sydImageGeometricalMean.h\txx`
 
 - ```template<class ImageType> typename ImageType::Pointer syd::GeometricalMean(const ImageType * ant_em, const ImageType * post_em, const ImageType * ant_sc, const ImageType * post_sc, double k)``` : Main function to compute geometrical mean and call the next functions. Start correcting the scattering for both the ant and the post images, flip the post image and then compute the geometrical mean between these two images.
 
-- ```template<class ImageType> typename ImageType::Pointer syd::RemoveScatter(const ImageType * em, const ImageType * sc, double k)``` : Remove the scattering. Compute $$ em - k*sc $$
+- ```template<class ImageType> typename ImageType::Pointer syd::RemoveScatter(const ImageType * em, const ImageType * sc, double k)``` : Remove the scattering. Compute $$ em - k*sc $$.
 
-- ```template<class ImageType> typename ImageType::Pointer syd::GeometricalMean(const ImageType * ant, const ImageType * post)``` : Compute the geometrical mean $$ \sqrt{ant * post} $$
+- ```template<class ImageType> typename ImageType::Pointer syd::GeometricalMean(const ImageType * ant, const ImageType * post)``` : Compute the geometrical mean $$ \sqrt{ant * post} $$.
 
 
 
