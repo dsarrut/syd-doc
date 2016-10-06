@@ -23,8 +23,11 @@ $$ μ_{material}^{[kEV]} = μ_{water}^{[kEV]} + {{μ_{water}^{[kEV]} - μ_{air}^
  > if the CT value > 0:
 $$ μ_{material}^{[kEV]} = μ_{water}^{[kEV]} + {{μ_{water}^{[kV_{eff}]}}\over{μ_{bone}^{[kV_{eff}]} - μ_{water}^{[kV_{eff}]}}}.{{μ_{bone}^{[kEV]} - μ_{water}^{[kEV]}}\over{1000}}*CT$$
 
- > with: CT: the value of the CT in HU
- >       μ the value of the attenuation in mm-1
+ > with:
+ > - CT the value of the CT in HU
+ > - μ the value of the attenuation in $$ mm^{-1} $$ for water, air and bone at different energy levels. **A table is necessary**
+ > - kEV ???
+ > - $$ kV_{eff} $$ ???
 
 
 - **sydInsertProjectionImage**
