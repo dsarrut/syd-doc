@@ -36,19 +36,29 @@ $$ μ_{material}^{[kEV]} = μ_{water}^{[kEV]} + { {μ_{water}^{[kV_{eff}]} }\ove
 
 Take a 3D image to create a new 2D (mhd) image with the projected image along the dimension ```--dimension (or -d)```. The resulted voxel is the sum of all voxel values along the dimension `-d`. The tag ```--mean (or -m)``` can be set to compute the mean (eg.: for CT) instead of the sum (eg.: for SPECT). The algorithm uses ```itk::SumProjectionImageFilter``` to project the image but the axes are flipped in the resulting image. Set the flag ```--flip (or -f)``` to have the the head at the top and the feet at the bottom.
 
-> When d=0, the image is projected along the x-axis
+> When d=0, the image is projected along the x-axis, the flip is the following:
+
+![flipX1](flipX1.png)
+
+>The original view is represented in the previous screenshot.
+
+![flipX2](flipX2.png)
+
+> The y-axis stays the same but the new x-axis corresponds to the old z-axis. So the phantom is upside down. We have to flip it to be aligned with planar images:
+
+![flipX3](flipX3.png)
 
 > When d=1, the image is projected along the y-axis, the flip is the following:
 
-![flip1](flipY1.png)
+![flipY1](flipY1.png)
 
-The original view is like this.
+> The original view is like this.
 
-![flip2](flipY2.png)
+![flipY2](flipY2.png)
 
-After the projection the y-axis is replaced by the old z-axis. As a consequence, the phantom appears to be upside down. And to be correctly registered with the planar images, the image has to be flipped.
+> After the projection the y-axis is replaced by the old z-axis. As a consequence, the phantom appears to be upside down. And to be correctly registered with the planar images, the image has to be flipped.
 
-![flip3](flipY3.png)
+![flipY3](flipY3.png)
 
 > When d=2, the image is projected along the z-axis but in a such case, no extra-flip is needed.
 
