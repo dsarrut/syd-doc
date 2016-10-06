@@ -61,7 +61,19 @@ In file `std_db/sydImageHelper.h\cxx`
 
 - ```void syd::ScaleImage(syd::Image::pointer image, double s)```
 
+- ```syd::Image::pointer syd::InsertImageGeometricalMean(const syd::Image::pointer input, double k)```
+
 - ```syd::Image::pointer InsertProjectionImage(const syd::Image::pointer input, double dimension=0, bool mean=false, bool flip=false);```
+
+
+In file `core/sydImageGeometricalMean.txx.h\txx`
+
+- ```template<class ImageType> typename ImageType::Pointer syd::GeometricalMean(const ImageType * ant_em, const ImageType * post_em, const ImageType * ant_sc, const ImageType * post_sc, double k)``` : Main function to compute geometrical mean and call the next functions. Start correcting the scattering for both the ant and the post images, flip the post image and then compute the geometrical mean between these two images.
+
+- ```template<class ImageType> typename ImageType::Pointer syd::RemoveScatter(const ImageType * em, const ImageType * sc, double k)``` : Remove the scattering. Compute $$ em - k*sc $$
+
+- ```template<class ImageType> typename ImageType::Pointer syd::GeometricalMean(const ImageType * ant, const ImageType * post)``` : Compute the geometrical mean $$ \sqrt{ant * post} $$
+
 
 
 In file `core/sydProjectionImage.h\txx`
