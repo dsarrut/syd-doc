@@ -73,9 +73,9 @@ Solution2: allows users to change by something like sydTranslateImage `<image>` 
 
 `sydInsertAttenuationCorrectedProjectionImage <images1> <images2>`
 
-Create a new (mhd) image from the CT using the attenuation map. `<images1>` is a CT image and `<images2>` is an attenuation map. The result is computed as:
+Create a new (mhd) image from the 2D Geometric Mean (GM) using the attenuation map. `<images1>` is a GM image and `<images2>` is an attenuation map. The result is computed as:
 
-$$CT_{corrected} = CT * \exp{...attenuationMap...}$$
+$$GM_{corrected} = GM * \exp{...attenuationMap...}$$
 
 - **sydCalibrateImage**
 
