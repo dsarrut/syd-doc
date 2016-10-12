@@ -69,9 +69,9 @@ Solution1: could it be possible to automatically find translations from the inpu
 Solution2: allows users to change by something like sydTranslateImage `<image>` x y z ?
 
 
-- **sydInsertScatterCorrectedProjectionImage**
+- **sydInsertAttenuationCorrectedProjectionImage**
 
-`sydInsertScatterCorrectedProjectionImage <images1> <images2>`
+`sydInsertAttenuationCorrectedProjectionImage <images1> <images2>`
 
 Create a new (mhd) image from the CT using the attenuation map. `<images1>` is a CT image and `<images2>` is an attenuation map. The result is computed as:
 
