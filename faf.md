@@ -25,9 +25,9 @@ $$ μ_{material}^{[kEV]} = μ_{water}^{[kEV]} + { {μ_{water}^{[kV_{eff}]} }\ove
 
  > with:
  > - CT the value of the CT in HU
- > - μ the value of the attenuation in $$ mm^{-1} $$ for water, air and bone at different energy levels. **A table is necessary** (maybe here : https://www.nist.gov/pml/x-ray-mass-attenuation-coefficients )
- > - kEV the required energy (of the target radionuclide) ???
- > - $$ kV_{eff} $$ the X-ray effective energy ???
+ > - μ the value of the attenuation in $$ mm^{-1} $$ for water, air and bone at different energy levels. Values of reference can be found here : http://physics.nist.gov/PhysRefData/XrayMassCoef/tab4.html )
+ > - kEV the energy of the photopeak of the radionuclide. Reference value of energy can be found here http://www.nucleide.org/DDEP_WG/DDEPdata.htm
+ > - kVeff the mean energy of the X-ray used for CT. kVeff is assumed to be one half or one third of kVPeak with kVPeak found in the Dicom Tag "(0018,0060) KVP"
 
 
 - **sydInsertProjectionImage**
