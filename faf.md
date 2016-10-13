@@ -41,7 +41,7 @@ Take a 3D image to create a new 2D (mhd) image with the projected image along th
 
 ![flipX1](flipX1.png)
 
-> The y-axis stays the same but the new x-axis corresponds to the old z-axis. So the phantom is upside down: We have to flip it to be aligned with planar images:
+> The y-axis stays the same but the new x-axis corresponds to the old z-axis. So the phantom is upside down:
 
 ![flipX2](flipX2.png)
 
