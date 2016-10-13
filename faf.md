@@ -32,9 +32,9 @@ $$ μ_{material}^{[kEV]} = μ_{water}^{[kEV]} + { {μ_{water}^{[kV_{eff}]} }\ove
 
 - **sydInsertProjectionImage**
 
-`sydInsertProjectionImage <image> --dimension 2 [--mean] [--flip]`
+`sydInsertProjectionImage <image> --dimension 2 [--mean] [--no-flip]`
 
-Take a 3D image to create a new 2D (mhd) image with the projected image along the dimension ```--dimension (or -d)```. The resulted voxel is the sum of all voxel values along the dimension `-d`. The tag ```--mean (or -m)``` can be set to compute the mean (eg.: for CT) instead of the sum (eg.: for SPECT). The algorithm uses ```itk::SumProjectionImageFilter``` to project the image but the axes are flipped in the resulting image. Set the flag ```--flip (or -f)``` to have the the head at the top and the feet at the bottom.
+Take a 3D image to create a new 2D (mhd) image with the projected image along the dimension ```--dimension (or -d)```. The resulted voxel is the sum of all voxel values along the dimension `-d`. The tag ```--mean (or -m)``` can be set to compute the mean (eg.: for CT) instead of the sum (eg.: for SPECT). The algorithm uses ```itk::SumProjectionImageFilter``` to project the image but the axes are flipped in the resulting image. Automatically, the image is righted (ie. same orientation than the original image). Set the flag ```--no-flip (or -f)``` to conserve the result of ```itk::SumProjectionImageFilter```.
 
 > When d=0, the image is projected along the x-axis, the flip is presented in the following statement.
 > The original view is represented in the next screenshot.
