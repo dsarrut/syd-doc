@@ -12,7 +12,7 @@ When an image is stored in the database (persist), the file is usually in the fo
 
 When an image is deleted, the associated `syd::File` are also deleted. This is perform in `syd::Image::Callback`.
 
-Functions to manage images are gathered in the `[syd::ImageHelper.h](https://github.com/OpenSyd/syd/blob/master/src/std_db/sydImageHelper.h)` file. 
+Functions to manage images are gathered in the [syd::ImageHelper.h](https://github.com/OpenSyd/syd/blob/master/src/std_db/sydImageHelper.h) file. 
 
 Functions to create & insert an image: 
 * `InsertImageFromFile`: from a mhd filename
