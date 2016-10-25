@@ -15,12 +15,19 @@ When an image is deleted, the associated `syd::File` are also deleted. This is p
 Functions to manage images are gathered in the `[syd::ImageHelper.h](https://github.com/OpenSyd/syd/blob/master/src/std_db/sydImageHelper.h)` file. 
 
 Functions to create & insert an image: 
-* `InsertImageFromFile` : from a mhd filename
-* `InsertImage` : from a itk image pointer
+* `InsertImageFromFile`: from a mhd filename
+* `InsertImage`: from a itk image pointer
 * `InsertImageFromDicomSerie`: from a DicomSerie
 * `InsertStitchDicomImage`: from two DicomSerie
 
-
+Functions to set image properties:
+* `SetImageInfoFromFile`: set properties from the associated syd::File (image size etc)
+* `SetImageInfoFromImage`: set properties from another image
+* `SetImageInfoFromDicomSerie`: set properties from a DicomSerie
+* `SetImageInfoFromCommandLine`: set properties from args command line (templated)
+* `SetPixelUnit`: set the pixel unit from string
+* `SetInjection`: set the injection from a string
+* `AddDicomSerie`: add a DicomSerie in the list 
 
 
 
