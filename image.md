@@ -8,12 +8,12 @@ Images are managed by the table `syd::Image`. This table basically contains meta
 
 All images are linked to a `syd::Patient`, this is required. Images may be linked to injection, and dicoms.
 
-When an image is stored in the database (persist), the file is usually in the folder with the patient name and named "<modality>_<id>.mhd" pattern. Warning, if the image is updated, for example by changing the modality, the filename is not updated.
+When an image is stored in the database (persist), the file is usually in the folder with the patient name and named ''<modality>_<id>.mhd'' pattern. Warning, if the image is updated, for example by changing the modality, the filename is not updated.
 
 When an image is deleted, the associated `syd::File` are also deleted. This is perform in `syd::Image::Callback`.
 
 
----
+<!-- ---
 **Command line tools to create a new image**
 
 Image creation:
@@ -50,3 +50,4 @@ API
 `syd::ImageBuilder`
 
 - `NewMHDImage(filename)`: copy files (both mhd/raw into db). But the image is not yet persistent in the db.
+ -->
