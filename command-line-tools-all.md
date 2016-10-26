@@ -2,13 +2,15 @@
 
 Low level tools that are common to all types of databases:
 
-* `sydCreateDatabase  <schema> <filename.db> <folder>`
+<!-- toc -->
+
+<!-- * `sydCreateDatabase  <schema> <filename.db> <folder>`
 * `sydInfo [<table>]`
 * `sydInsert <table> [<arg>]`
 * `sydDelete <table> <list_of_ids>`
 * `sydFind <table> [<filter_pattern>] [-l] [-f] [-t]`
 * `sydUpdate <table> <field> <value> <id>`
-<!-- * `sydCheck <table>`-->
+* `sydCheck <table>`-->
 
 
 # sydCreateDatabase
