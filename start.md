@@ -1,6 +1,6 @@
 
 
-# Quick start
+# Quick start (TL;DR)
 
 <!-- toc -->
 
@@ -76,7 +76,7 @@ sydFind DicomSerie SPECT TOMO -e PLANAR -l
 ```
 
 ----------------------------------------------------------
-## Convert DICOM to raw images (mhd/raw)
+## 3. Convert DICOM to raw images (mhd/raw)
 
 The first key point is to keep the initial DICOM images and perform image processing tasks on copy images in mhd/raw file format. The second point is to label images with tags to retrieve them easily.
 
@@ -92,7 +92,7 @@ You can use `sydUpdateImage` to change the tags, the pixel unit, or perform basi
 
 
 ----------------------------------------------------------
-## Conclusion
+## 4. Conclusion
 
 
 * SYD manages a *single file* database, with raw image data in a single associated folder.
