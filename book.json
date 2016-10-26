@@ -3,6 +3,7 @@
         "include-codeblock", 
         "mathjax",
         "simple-page-toc"
+        ]
 }
     ],
     "pluginsConfig": {
