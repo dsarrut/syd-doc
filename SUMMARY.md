@@ -8,5 +8,5 @@
    * [For StandardDatabase](command-line-tools-std.md)
 * [API](api.md)
   * [Images management](image.md)
-  * [FAF](faf.md)
+  * [FAF calibration](faf.md)
 
