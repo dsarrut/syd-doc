@@ -1,4 +1,4 @@
-# FAF
+# FAF calibration
 
 ## 1. Command Line tools
 
