@@ -6,8 +6,8 @@
 * [Command line tools](command-line-tools.md)
    * [For all types of databases](command-line-tools-all.md)
    * [For StandardDatabase](command-line-tools-std.md)
-* [API](api.md)
 * [Images management](image.md)
+* [API](api.md)
 * [Workflow](workflow.md)
    * [FAF](faf.md)
 
