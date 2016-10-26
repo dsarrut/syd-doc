@@ -1,7 +1,9 @@
 {
     "plugins": [
         "include-codeblock", 
-        "mathjax"
+        "mathjax",
+        "simple-page-toc"
+}
     ],
     "pluginsConfig": {
         "fontSettings": {
