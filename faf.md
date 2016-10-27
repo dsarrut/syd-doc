@@ -14,9 +14,10 @@ $$
 
 - **sydInsertAttenuationImage**
 
-`sydInsertAttenuationImage <image>`
+`sydInsertAttenuationImage <image> -c [water,bone] -s [air1,water1,bone1,air2,water2,bone2] -p [%1,%2`
 
-Create a new (mhd) image with the conversion of CT's HU into attenuation coefficients.`<image>`  must be a CT image. According to GE, the calculation from CT HU can be separated in 2 parts:
+Create a new (mhd) image with the conversion of CT's HU into attenuation coefficients.`<image>`  must be a CT image. The tag ` --attenuationCT (or -c)` corresponds to the attenuation coefficients for water and bone (respect the order) for mean energy of the X-ray used for CT (2 expected values).
+The tag `--attenuationSPECT (or -s)` corresponds to the attenuation coefficients for air, water and bone (respect the order) for all targeted energies of the SPECT. The tag `--percentage (or -p)` corresponds to the normalized percentage for all targeted energies of the SPECT (sum =1). If there is just 1 targeted energy, this parameter is optional. According to GE, the calculation from CT HU can be separated in 2 parts:
  > if the CT value ≤ 0: 
 $$ μ_{material}^{[kEV]} = μ_{water}^{[kEV]} + { {μ_{water}^{[kEV]} - μ_{air}^{[kEV]} }\over{1000} }*CT$$
 
@@ -28,6 +29,9 @@ $$ μ_{material}^{[kEV]} = μ_{water}^{[kEV]} + { {μ_{water}^{[kV_{eff}]} }\ove
  > - μ the value of the attenuation in $$ mm^{-1} $$ for water, air and bone at different energy levels. Values of reference can be found here : http://physics.nist.gov/PhysRefData/XrayMassCoef/tab4.html
  > - kEV the energy of the photopeak of the radionuclide. Reference value of energy can be found here http://www.nucleide.org/DDEP_WG/DDEPdata.htm
  > - kVeff the mean energy of the X-ray used for CT. kVeff is assumed to be one half or one third of kVPeak with kVPeak found in the Dicom Tag "(0018,0060) KVP"
+
+> With multiple energies (eg: kEV1, kEV2), with different percentages (eg: %1, %2 with %1 + %2 = 1),the total attenuation map is computed:
+ $$ μ_{material}^{total} = \%1 * μ_{material}^{[kEV1]} + \%2 * μ_{material}^{[kEV2]}$$
 
 
 - **sydInsertProjectionImage**
@@ -104,6 +108,7 @@ In file `std_db/sydImageHelper.h\cxx`
 
 - ```syd::Image::pointer InsertProjectionImage(const syd::Image::pointer input, double dimension=0, bool mean=false, bool flip=false);```
 
+- ```syd::Image::pointer InsertAttenuationImage(const syd::Image::pointer input, double numberEnergySPECT, double attenuationWaterCT, double attenuationBoneCT, std::vector<double>& attenuationAirSPECT, std::vector<double>& attenuationWaterSPECT, std::vector<double>& attenuationBoneSPECT, std::vector<double>& percentage);```
 
 In file `core/sydImageGeometricalMean.h\txx`
 
@@ -113,8 +118,6 @@ In file `core/sydImageGeometricalMean.h\txx`
 
 - ```template<class ImageType> typename ImageType::Pointer syd::GeometricalMean(const ImageType * ant, const ImageType * post)``` : Compute the geometrical mean $$ \sqrt{ant * post} $$.
 
-
-
 In file `core/sydProjectionImage.h\txx`
 
 - ```template<class ImageType, class OutputImageType> typename OutputImageType::Pointer Projection(const ImageType * input, double dimension, bool mean, bool flip)``` : Call the next function to project the input image, and then compute the mean and flip if necessary
@@ -122,4 +125,6 @@ In file `core/sydProjectionImage.h\txx`
 - ```template<class ImageType, class OutputImageType> typename OutputImageType::Pointer Projection(const ImageType * input, double dimension);``` : 
 Call ```itk::SumProjectionImageFilter``` to project the input image along the dimension `dimension`
 
+In file `core/sydAttenuationImage.h\txx`
 
+- ```template<class ImageType> typename ImageType::Pointer Attenuation(const ImageType * input, double numberEnergySPECT, double attenuationWaterCT, double attenuationBoneCT, std::vector<double>& attenuationAirSPECT, std::vector<double>& attenuationWaterSPECT, std::vector<double>& attenuationBoneSPECT, std::vector<double>& percentage);``` : Compute the formula described above.
