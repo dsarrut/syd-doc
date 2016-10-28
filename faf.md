@@ -30,8 +30,7 @@ $$ μ_{material}^{[kEV]} = μ_{water}^{[kEV]} + { {μ_{water}^{[kV_{eff}]} }\ove
  > - kEV the energy of the photopeak of the radionuclide. Reference value of energy can be found here http://www.nucleide.org/DDEP_WG/DDEPdata.htm
  > - kVeff the mean energy of the X-ray used for CT. kVeff is assumed to be one half or one third of kVPeak with kVPeak found in the Dicom Tag "(0018,0060) KVP"
 
-> With multiple energies (eg: kEV1, kEV2), with different percentages (eg: %1, %2 with %1 + %2 = 1),the total attenuation map is computed:
- $$ μ_{material}^{total} = \%1 * μ_{material}^{[kEV1]} + \%2 * μ_{material}^{[kEV2]}$$
+> With radionuclide having complex energy spectrum (e.g. several photopeaks or large continuous spectrum), the total attenuation map is computed by weighted sum of the different considered energies. For example, with two peaks EV1 and EV2 with weight w1 and w2:  $$ μ_{material}^{total} = w1 * μ_{material}^{[kEV1]} + w2 * μ_{material}^{[kEV2]}$$
 
 
 - **sydInsertProjectionImage**
