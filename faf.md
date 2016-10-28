@@ -14,10 +14,10 @@ $$
 
 - **sydInsertAttenuationImage**
 
-`sydInsertAttenuationImage <image> -c [water,bone] -s [air1,water1,bone1,air2,water2,bone2] -p [%1,%2`
+`sydInsertAttenuationImage <image> -c [water,bone] -s [air1,water1,bone1,air2,water2,bone2] -w [w1,w2]`
 
 Create a new (mhd) image with the conversion of CT's HU into attenuation coefficients.`<image>`  must be a CT image. The tag ` --attenuationCT (or -c)` corresponds to the attenuation coefficients for water and bone (respect the order) for mean energy of the X-ray used for CT (2 expected values).
-The tag `--attenuationSPECT (or -s)` corresponds to the attenuation coefficients for air, water and bone (respect the order) for all targeted energies of the SPECT. The tag `--percentage (or -p)` corresponds to the normalized percentage for all targeted energies of the SPECT (sum =1). If there is just 1 targeted energy, this parameter is optional. According to GE, the calculation from CT HU can be separated in 2 parts:
+The tag `--attenuationSPECT (or -s)` corresponds to the attenuation coefficients for air, water and bone (respect the order) for all targeted energies of the SPECT. The tag `--weight (or -w)` corresponds to the normalized weights for all targeted energies of the SPECT (sum =1). If there is just 1 targeted energy, this parameter is optional. According to GE, the calculation from CT HU can be separated in 2 parts:
  > if the CT value ≤ 0: 
 $$ μ_{material}^{[kEV]} = μ_{water}^{[kEV]} + { {μ_{water}^{[kEV]} - μ_{air}^{[kEV]} }\over{1000} }*CT$$
 
