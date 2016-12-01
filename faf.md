@@ -80,7 +80,7 @@ Solution2: allows users to change by something like sydTranslateImage `<image>` 
 
 Create a new (mhd) image from the 2D Geometric Mean (GM) using the projected attenuation map. `<images1>` is a 2D GM image and `<images2>` is the projected attenuation map. The spacing $$spacing_d$$ and size $$nbVoxel_d$$ along the d-axis given by `--dimension (or -d)` are computed thanks to the original 3D attenuation map `<image3>`. The result is computed as:
 
-$$GM_{corrected} = GM * \exp{(attenuationMap*nbVoxel_d*{spacing_d\over{2*10}})}$$ ???
+$$GM_{corrected} = GM * \exp{(attenuationMap*nbVoxel_d*{spacing_d\over{2*10}})}$$ 
 
 - **sydCalibrateImage**
 
