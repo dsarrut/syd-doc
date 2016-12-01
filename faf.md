@@ -76,7 +76,7 @@ Solution2: allows users to change by something like sydTranslateImage `<image>` 
 
 - **sydInsertAttenuationCorrectedProjectionImage**
 
-`sydInsertAttenuationCorrectedProjectionImage -i <image1> -j <image2> -l <image3> --dimension d`
+`sydInsertAttenuationCorrectedProjectionImage <image1> <image2> <image3> --dimension d`
 
 Create a new (mhd) image from the 2D Geometric Mean (GM) using the projected attenuation map. `<image1>` is a 2D GM image and `<image2>` is the projected attenuation map. The spacing $$spacing_d$$ and size $$nbVoxel_d$$ along the d-axis given by `--dimension (or -d)` are computed thanks to the original 3D attenuation map `<image3>`. The result is computed as:
 
