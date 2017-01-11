@@ -2,9 +2,9 @@
 
 You need c++ compiler, git, cmake. Works under linux and mac osx. For Windows ... (it's a joke?).
 
-There are a lot of dependencies, it is not easy to install. Dependencies are: ODB, ITK, DCMTK, Ceres-solver, Boost...
+There are a lot of dependencies, it is not easy to install. Dependencies are: ODB, ITK, DCMTK, Ceres-solver, Boost... But with latest version, we use hunter to handle some dependencies.
 
-### Install ODB <img src="images/logo-odb.png" width="60">
+### Install ODB <img src="images/logo-odb.png" width="60"> (without hunter)
 
 * For object-oriented database management : "_ODB is an object-relational mapping (ORM) system for C++. It provides tools, APIs, and library support that allow you to persist C++ objects to a relational database (RDBMS) without having to deal with tables, columns, or SQL and without manually writing any of the mapping code._"
 * See http://www.codesynthesis.com/products/odb
@@ -34,14 +34,15 @@ There are a lot of dependencies, it is not easy to install. Dependencies are: OD
 * You must use the option `Module_ITKVtkGlue=ON` (so with vtk)
 * You may want to set the env variable: `export ITK_DIR=/my_path/build-itk`
 
-### Install DCMTK <img src="images/logo-dcmtk.png" width="48">
+### Install DCMTK <img src="images/logo-dcmtk.png" width="48"> (without hunter)
 * For Dicom processing
 * See [dicom.offis.de](http://dicom.offis.de/dcmtk.php.en)
 * Work with version >= 3.6.0
 * DCMTK 3.6.0, latest public version may not compile with latest version of gcc installed in your system. Please consider using newer shapshot of DCMTK.
 * You need to activate BUILD_SHARED_LIBS=ON , consider using CMake instead of the recommended './configure' file
 
-### Install Boost  <img src="images/logo-boost.png" width="48">
+### Install Boost  <img src="images/logo-boost.png" width="48"> (without hunter)
+
 * [boost.org](http://www.boost.org)
 * Extended C++ library
 * Version > 1.40
