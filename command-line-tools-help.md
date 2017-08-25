@@ -2,6 +2,50 @@
 
 
 
+## Table of contents
+* [sydCalibrateImage](#sydCalibrateImage)
+* [sydCheck](#sydCheck)
+* [syd_clitkExtractPatient](#syd_clitkExtractPatient)
+* [sydComputeActivityInMBqByDetectedCounts](#sydComputeActivityInMBqByDetectedCounts)
+* [sydCreateDatabase](#sydCreateDatabase)
+* [sydDelete](#sydDelete)
+* [sydDicomInfo](#sydDicomInfo)
+* [syd_elastix](#syd_elastix)
+* [sydFind](#sydFind)
+* [syd_gate](#syd_gate)
+* [sydIdentifyImageType](#sydIdentifyImageType)
+* [sydInfo](#sydInfo)
+* [sydInsert](#sydInsert)
+* [sydInsertAnonymizedDicom](#sydInsertAnonymizedDicom)
+* [sydInsertAttenuationCorrectedProjectionImage](#sydInsertAttenuationCorrectedProjectionImage)
+* [sydInsertAttenuationImage](#sydInsertAttenuationImage)
+* [sydInsertAveragedImages](#sydInsertAveragedImages)
+* [sydInsertChangAttenuationImage](#sydInsertChangAttenuationImage)
+* [sydInsertDicom](#sydInsertDicom)
+* [sydInsertElastixRegistration](#sydInsertElastixRegistration)
+* [sydInsertFlippedImage](#sydInsertFlippedImage)
+* [sydInsertGateOutput](#sydInsertGateOutput)
+* [sydInsertImage](#sydInsertImage)
+* [sydInsertImageFromDicom](#sydInsertImageFromDicom)
+* [sydInsertManualRegisteredImage](#sydInsertManualRegisteredImage)
+* [sydInsertPlanarGeometricalMean](#sydInsertPlanarGeometricalMean)
+* [sydInsertProjectionImage](#sydInsertProjectionImage)
+* [sydInsertRegisterPlanarSPECT](#sydInsertRegisterPlanarSPECT)
+* [sydInsertRoiBasedTimeIntegratedActivity](#sydInsertRoiBasedTimeIntegratedActivity)
+* [sydInsertRoiMaskImage](#sydInsertRoiMaskImage)
+* [sydInsertRoiStatistic](#sydInsertRoiStatistic)
+* [sydInsertTimeIntegratedActivityImage](#sydInsertTimeIntegratedActivityImage)
+* [sydStitchDicom](#sydStitchDicom)
+* [sydSubstituteRadionuclide](#sydSubstituteRadionuclide)
+* [sydTest](#sydTest)
+* [syd_transformix](#syd_transformix)
+* [sydUpdate](#sydUpdate)
+* [sydUpdateImage](#sydUpdateImage)
+* [sydUpdateRadionuclide](#sydUpdateRadionuclide)
+* [sydUpdateTags](#sydUpdateTags)
+
+
+
 ##  sydCalibrateImage
 syd 0.2
 
@@ -21,7 +65,7 @@ with 1 MBq injected activity is created and linked to the images.
 
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -56,7 +100,7 @@ Usage: sydCheck <table> <list_of_ids>
 
 Check TODO
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -78,7 +122,7 @@ Usage: syd_clitkExtractPatient <list_of_image_ids>
 Use clitkExtractPatient to build a mask image of images. The RoiType named 
 'body' *must exist in the db.
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -120,7 +164,7 @@ with lambda = log(2.0)/half_life
 with time = time between injection and acquisition
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -147,7 +191,7 @@ will load the library libStandardDatabase.so (or dylib) that contains the
 database schema. The variable SYD_PLUGIN is used to look fo those libraries.
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -172,7 +216,7 @@ Delete the given elements in a table.
 elements.
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -195,7 +239,7 @@ Alternatively, you can specify a simple file instead of dicom_id or
 with the option --file, (the dicom_id is ignored),
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -216,7 +260,7 @@ Parameters are:
 \- <elastix_ids>  : ids of Elastix records in the db
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -243,7 +287,7 @@ Case sensitive.
 Use --exclude option to exclude words.
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -281,7 +325,7 @@ database.
 Alias are: CT_IMAGE PATIENT RADIONUCLIDE Z A SOURCE_IMAGE
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -305,7 +349,7 @@ Create a new (mhd) image for all given dicoms
 \- <dicom_ids>   list of dicom (serie) ids to identify
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -326,7 +370,7 @@ are:
 \- <table>     [optional] if given, list all the fields of the table
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -344,7 +388,7 @@ Usage: sydInsert <table> [<arg>]
 Insert a new element in the table <table> of the db. The <args> is a list of 
 strings depends on the table type.
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -366,7 +410,7 @@ birthdate)
 
 *WARNING* some dicom tags could be lost.
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -392,7 +436,7 @@ spacing and the size along the d-axis given by --dimension (or -d) are computed
 thanks to the original 3D attenuation map [image3].
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -436,7 +480,7 @@ energies of the SPECT (sum =1). If there is just 1 targeted energy, this
 parameter is optional
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -475,10 +519,45 @@ Create an image by averaging all given images (must be the same size).
 \- <image_ids>      ids of the images to update
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
+|Tags option:|||
+||--add_tag=STRING|Add a tag (or a list if given in " ")|
+||--rm_tag=STRING|Remove a tag (or a list if given in " ")|
+||--rm_all_tags|Remove all tags  (default=off)|
+|Image info option:|||
+||--patient=STRING|Patient name or id|
+||--pixel_unit=STRING|Name of pixel value unit to attach to the image|
+||--modality=STRING|Modality type|
+||--dicom=INT|Dicom id to link|
+||--injection=STRING|Injection id or name to link|
+||--acquisition_date=STRING|Acquisition date, ie '2011-11-03 12:34'|
+||--frame_of_reference_uid=STRING|--frame_of_reference_uid=STRINGFrame of ref (for image coordinate system)|
+||--flip_if_negative_spacing|--flip_if_negative_spacingFlip the image if negative spacing  (default=off)|
+|Comments option:|||
+||--add_comment=STRING|Add a comment|
+||--rm_comment=INT|Remove a comment|
+||--db=STRING|Database file (use 'default' to read from $SYD_CURRENT_DB)  (default=`default')|
+|-v|--verbose=INT|Verbosity level (0 for silence)  (default=`0')|
+||--verboseSQL|Verbose SQL query (debug)  (default=off)|
+||--config=STRING|Config file where to read options (overwritten by command line options)|
+
+
+##  sydInsertChangAttenuationImage
+syd 0.4
+
+Usage: sydChangAttenuationImage <image1> -a <nbAngles>
+
+Create a new (mhd) image computed from an attenuation map <image1>
+with Chang method. <nbAngles> is the number of Angles of projection
+
+|short option|option|commment|
+|---|---|---|
+|-h|--help|Print help and exit|
+|-V|--version|Print version and exit|
+|-a|--angles=INT|Number of angles|
 |Tags option:|||
 ||--add_tag=STRING|Add a tag (or a list if given in " ")|
 ||--rm_tag=STRING|Remove a tag (or a list if given in " ")|
@@ -516,7 +595,7 @@ created. WARNING: this is the <study_id> not the <id> !
 
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -547,7 +626,7 @@ Parameters are:
 by id)
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -575,7 +654,7 @@ Create a new (mhd) flipped image.
 The axis of the flips are defined according the sequence -a
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -623,7 +702,7 @@ FIXME Tags image are assumed to be : <study> <radionuclide> then tia, dose,
 edep
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -661,7 +740,7 @@ Insert a mhd image in the db
 if --like is not used, --patient is required
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -702,7 +781,7 @@ dicom image into an image with this pixel_type.
 
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -740,7 +819,7 @@ The registration takes an image <image1> and translates it along x,y and z
 axis.
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -781,7 +860,7 @@ Create a new (mhd) image with the geometrical mean of planar images
 POST_SC)
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -821,7 +900,7 @@ The tag --mean (or -m) can be set to compute the mean (eg.: for CT) instead of
 the sum (eg.: for SPECT)
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -862,7 +941,7 @@ The registration takes the Planar image <image1> and the projected SPECT image
 translation to maximize the correlation coefficient.
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -900,7 +979,7 @@ Create a FitTimepoints that fit region based time activity
 \- <roi_name>                  list of roi_names (or 'all')
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -933,7 +1012,7 @@ RoiType`)
 \- <mask.mhd>     filename that will be copied in the db
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -988,7 +1067,7 @@ is dumped on the disk.- If a RoiStatistic already exist for the same image and
 roi_name, it is skipped, except if the --force option is given.  
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -1020,7 +1099,7 @@ Create a new image with TIA in every pixels
 \- <list_of_image_ids>     list of image id to integrate
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -1066,7 +1145,7 @@ Create a new (mhd) Image for each given dicom
 dicom_series_uid)
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -1110,7 +1189,7 @@ created with 1 MBq.
 
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -1140,7 +1219,7 @@ Usage: sydTest DEBUG
 
 DEBUG do not use
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -1167,7 +1246,7 @@ An Elastix id must be given for every image_id.
 
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -1203,7 +1282,7 @@ Usage: sydUpdate <table> <field> <value> <id>
 
 Update the field <field> of the element <id> in the table <table>.
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -1223,7 +1302,7 @@ Update information associated with an image, and/or scale.
 \- <image_ids>      ids of the images to update
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -1271,7 +1350,7 @@ Create or update a new radionuclide, by retrieving information from
 http://www.nucleide.org/DDEP_WG/DDEPdata.htm
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
@@ -1295,7 +1374,7 @@ Update tags associated with record.
 \- <ids>          ids of the record to update
 
 
-|little tag|tag|commment|
+|short option|option|commment|
 |---|---|---|
 |-h|--help|Print help and exit|
 |-V|--version|Print version and exit|
