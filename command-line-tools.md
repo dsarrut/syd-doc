@@ -6,7 +6,7 @@ Most of the tools (except sydCreateDatabase) require a database, set by the flag
 
 Help for most of the tools may be displayed with the `-h` flag. 
 
-
+You can find an overview with help of all syd command line tools [here](command-line-tools-help.md)
 
 
 
